@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bc | php.js]]></title>
+  <link href="http://kvz.github.com/phpjs/categories/bc/atom.xml" rel="self"/>
+  <link href="http://kvz.github.com/phpjs/"/>
+  <updated>2012-09-26T17:33:01+02:00</updated>
+  <id>http://kvz.github.com/phpjs/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript bcsub function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/bcsub"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/bcsub</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's bcsub</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bc/bcsub.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/bc/bcsub.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">bcsub</span> <span class="p">(</span><span class="nx">left_operand</span><span class="p">,</span> <span class="nx">right_operand</span><span class="p">,</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)</span>
+</span><span class='line'><span class="c1">// -    depends on: _phpjs_shared_bc</span>
+</span><span class='line'><span class="c1">// *     example 1: bcsub(1, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: -1</span>
+</span><span class='line'><span class="c1">//  @todo: implement these testcases</span>
+</span><span class='line'><span class="c1">//        // set scale to zero</span>
+</span><span class='line'><span class="c1">//        bcscale(0);</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcsub&#39;, 1, &#39;-1&#39;, bcsub(&#39;1&#39;,&#39;2&#39;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcsub&#39;, 2, &#39;-6.0000&#39;, bcsub(&#39;-1&#39;,&#39;5&#39;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcsub&#39;, 3, &#39;8728932000054820705086578390258.00&#39;, bcsub(&#39;8728932001983192837219398127471&#39;,&#39;1928372132132819737213&#39;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcsub&#39;, 4, &#39;-1.111000&#39;, bcsub(&#39;1.123&#39;, &#39;2.234&#39;, 6));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcsub&#39;, 5, &#39;-2.20&#39;, bcsub(&#39;1.123456&#39;, &#39;3.333333&#39;, 2)); //-2.209877 note: rounding not applicable as bcmath truncates.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">libbcmath</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_phpjs_shared_bc</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">result</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">scale</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">scale</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">scale</span> <span class="o">=</span> <span class="p">((</span><span class="nx">scale</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// create objects</span>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">left_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">right_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_sub</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">=</span> <span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/bc/bcsub.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/bc/bcsub.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript bcscale function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/bcscale"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/bcscale</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's bcscale</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bc/bcscale.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/bc/bcscale.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">bcscale</span> <span class="p">(</span><span class="nx">scale</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)this.</span>
+</span><span class='line'><span class="c1">// -    depends on: _phpjs_shared_bc</span>
+</span><span class='line'><span class="c1">// *     example 1: bcscale(1);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 3</span>
+</span><span class='line'><span class="c1">//  @todo: implement these testcases</span>
+</span><span class='line'><span class="c1">//        bcscale(0);</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcscale&#39;, 1, false, bcscale(&#39;fail&#39;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcscale&#39;, 2, false, bcscale(-1));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcscale&#39;, 3, true, bcscale(5));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcscale&#39;, 4, true, bcscale(0));</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">libbcmath</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_phpjs_shared_bc</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">scale</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">scale</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">scale</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">scale</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">libbcmath</span><span class="p">.</span><span class="nx">scale</span> <span class="o">=</span> <span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/bc/bcscale.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/bc/bcscale.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript bcround function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/bcround"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/bcround</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's bcround</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bc/bcround.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/bc/bcround.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">bcround</span> <span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)</span>
+</span><span class='line'><span class="c1">// -    depends on: _phpjs_shared_bc</span>
+</span><span class='line'><span class="c1">// *     example 1: bcround(1, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 3</span>
+</span><span class='line'><span class="c1">//  @todo: implement these testcases</span>
+</span><span class='line'><span class="c1">//        bcscale(0);</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 1, &#39;-2&#39;, bcround(&#39;-1.5&#39;, 0));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 2, &#39;-1.1235&#39;, bcround(&#39;-1.1234567&#39;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 3, &#39;2&#39;, bcround(&#39;1.5&#39;, 0));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 4, &#39;1.1235&#39;, bcround(&#39;1.1234567&#39;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 5, &#39;1&#39;, bcround(&#39;1.499999999&#39;, 0));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 6, &#39;2&#39;, bcround(&#39;1.5555555555555555555&#39;, 0));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 7, &#39;1.44&#39;, bcround(&#39;1.444999&#39;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcround&#39;, 8, &#39;-1.44&#39;, bcround(&#39;-1.444999&#39;, 2));</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">libbcmath</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_phpjs_shared_bc</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">temp</span><span class="p">,</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">digit</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">right_operand</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// create number</span>
+</span><span class='line'><span class="nx">temp</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">temp</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">val</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// check if any rounding needs</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">precision</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">=</span> <span class="nx">temp</span><span class="p">.</span><span class="nx">n_scale</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// nothing to round, just add the zeros.</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="nx">temp</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">temp</span><span class="p">.</span><span class="nx">n_value</span><span class="p">[</span><span class="nx">temp</span><span class="p">.</span><span class="nx">n_len</span> <span class="o">+</span> <span class="nx">temp</span><span class="p">.</span><span class="nx">n_scale</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">temp</span><span class="p">.</span><span class="nx">n_scale</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">temp</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// get the digit we are checking (1 after the precision)</span>
+</span><span class='line'><span class="c1">// loop through digits after the precision marker</span>
+</span><span class='line'><span class="nx">digit</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">.</span><span class="nx">n_value</span><span class="p">[</span><span class="nx">temp</span><span class="p">.</span><span class="nx">n_len</span> <span class="o">+</span> <span class="nx">precision</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">right_operand</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">right_operand</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_new_num</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">precision</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">digit</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//round away from zero by adding 1 (or -1) at the &quot;precision&quot;.. ie 1.44999 @ 3dp = (1.44999 + 0.001).toString().substr(0,5)</span>
+</span><span class='line'>    <span class="nx">right_operand</span><span class="p">.</span><span class="nx">n_value</span><span class="p">[</span><span class="nx">right_operand</span><span class="p">.</span><span class="nx">n_len</span> <span class="o">+</span> <span class="nx">right_operand</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">temp</span><span class="p">.</span><span class="nx">n_sign</span> <span class="o">==</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">MINUS</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// round down</span>
+</span><span class='line'>        <span class="nx">right_operand</span><span class="p">.</span><span class="nx">n_sign</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">MINUS</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_add</span><span class="p">(</span><span class="nx">temp</span><span class="p">,</span> <span class="nx">right_operand</span><span class="p">,</span> <span class="nx">precision</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// leave-as-is.. just truncate it.</span>
+</span><span class='line'>    <span class="nx">result</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">precision</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">=</span> <span class="nx">precision</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/bc/bcround.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/bc/bcround.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript bcmul function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/bcmul"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/bcmul</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's bcmul</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bc/bcmul.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/bc/bcmul.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">bcmul</span> <span class="p">(</span><span class="nx">left_operand</span><span class="p">,</span> <span class="nx">right_operand</span><span class="p">,</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)</span>
+</span><span class='line'><span class="c1">// -    depends on: _phpjs_shared_bc</span>
+</span><span class='line'><span class="c1">// *     example 1: bcmul(1, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 3</span>
+</span><span class='line'><span class="c1">//  @todo: implement these testcases</span>
+</span><span class='line'><span class="c1">//        bcscale(0);</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcmul&#39;, 1, &#39;2&#39;, bcmul(&quot;1&quot;, &quot;2&quot;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcmul&#39;, 2, &#39;-15&#39;, bcmul(&quot;-3&quot;, &quot;5&quot;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcmul&#39;, 3, &#39;12193263111263526900&#39;, bcmul(&quot;1234567890&quot;, &quot;9876543210&quot;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcmul&#39;, 4, &#39;3.75&#39;, bcmul(&quot;2.5&quot;, &quot;1.5&quot;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcmul&#39;, 5, &#39;13008.1522&#39;, bcmul(&quot;5573.33&quot;, &quot;2.334&quot;, 4));</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">libbcmath</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_phpjs_shared_bc</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">result</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">scale</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">scale</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">scale</span> <span class="o">=</span> <span class="p">((</span><span class="nx">scale</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// create objects</span>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">left_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">right_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_multiply</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">=</span> <span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/bc/bcmul.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/bc/bcmul.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript bcdiv function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/bcdiv"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/bcdiv</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's bcdiv</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>bc/bcdiv.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/bc/bcdiv.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">bcdiv</span> <span class="p">(</span><span class="nx">left_operand</span><span class="p">,</span> <span class="nx">right_operand</span><span class="p">,</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)</span>
+</span><span class='line'><span class="c1">// -    depends on: _phpjs_shared_bc</span>
+</span><span class='line'><span class="c1">// *     example 1: bcdiv(1, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 3</span>
+</span><span class='line'><span class="c1">//  @todo: implement these testcases</span>
+</span><span class='line'><span class="c1">//        bcscale(0);</span>
+</span><span class='line'><span class="c1">//</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 1, &#39;0&#39;, bcdiv(&quot;1&quot;, &quot;2&quot;));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 2, &#39;0.50&#39;, bcdiv(&quot;1&quot;, &quot;2&quot;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 3, &#39;-0.2000&#39;, bcdiv(&quot;-1&quot;, &quot;5&quot;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 4, &#39;3333.3333&#39;, bcdiv(&quot;10000.0000&quot;, &quot;3&quot;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 5, &#39;2387.8877&#39;, bcdiv(&quot;5573.33&quot;, &quot;2.334&quot;, 4));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 7, &#39;1.00&#39;, bcdiv(&#39;6.00&#39;, &#39;6.00&#39;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 8, &#39;1.00&#39;, bcdiv(&#39;2.00&#39;, &#39;2.00&#39;, 2));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 9, &#39;59.51111111&#39;, bcdiv(&#39;66.95&#39;, &#39;1.125&#39;, 8));</span>
+</span><span class='line'><span class="c1">//        bcmath.test.result(&#39;bcdiv&#39;, 10, &#39;4526580661.75&#39;, bcdiv(&#39;8728932001983192837219398127471.00&#39;, &#39;1928372132132819737213.00&#39;, 2));</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">libbcmath</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_phpjs_shared_bc</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">result</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">scale</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">scale</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">scale</span> <span class="o">=</span> <span class="p">((</span><span class="nx">scale</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// create objects</span>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_init_num</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">first</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">left_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'><span class="nx">second</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">php_str2num</span><span class="p">(</span><span class="nx">right_operand</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">result</span> <span class="o">=</span> <span class="nx">libbcmath</span><span class="p">.</span><span class="nx">bc_divide</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">,</span> <span class="nx">scale</span><span class="p">);</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">result</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// error</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;(BC) Division by zero&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">scale</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">result</span><span class="p">.</span><span class="nx">n_scale</span> <span class="o">=</span> <span class="nx">scale</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/bc/bcdiv.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/bc/bcdiv.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

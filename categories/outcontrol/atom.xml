@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: outcontrol | php.js]]></title>
+  <link href="http://kvz.github.com/phpjs/categories/outcontrol/atom.xml" rel="self"/>
+  <link href="http://kvz.github.com/phpjs/"/>
+  <updated>2012-09-26T17:33:01+02:00</updated>
+  <id>http://kvz.github.com/phpjs/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ob_start function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ob_start"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ob_start</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_start</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>outcontrol/ob_start.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/outcontrol/ob_start.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ob_start</span> <span class="p">(</span><span class="nx">output_callback</span><span class="p">,</span> <span class="nx">chunk_size</span><span class="p">,</span> <span class="nx">erase</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %        note 1: chunk_size and erase arguments are not presently supported</span>
+</span><span class='line'><span class="c1">// *     example 1: ob_start(&#39;someCallback&#39;, 4096, true);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">bufferObj</span> <span class="o">=</span> <span class="p">{},</span>
+</span><span class='line'>    <span class="nx">internalType</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">extra</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="nx">erase</span> <span class="o">=</span> <span class="o">!</span><span class="p">(</span><span class="nx">erase</span> <span class="o">===</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// true is default</span>
+</span><span class='line'><span class="nx">chunk_size</span> <span class="o">=</span> <span class="nx">chunk_size</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">?</span> <span class="mi">4096</span> <span class="o">:</span> <span class="p">(</span><span class="nx">chunk_size</span> <span class="o">||</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">obs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">obs</span> <span class="o">||</span> <span class="p">[];</span> <span class="c1">// Array for nestable buffers</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">phpjs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ini</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">ini</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">obs</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obs</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span><span class="p">.</span><span class="nx">local_value</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span><span class="p">.</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;off&#39;</span><span class="p">)))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">extra</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// We&#39;ll run another ob_start() below (recursion prevented)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">output_callback</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">output_callback</span> <span class="o">===</span> <span class="s1">&#39;URL-Rewriter&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Any others?</span>
+</span><span class='line'>        <span class="nx">internalType</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">output_callback</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">URLRewriter</span><span class="p">()</span> <span class="p">{};</span> <span class="c1">// No callbacks?</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">output_callback</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">output_callback</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">output_callback</span><span class="p">];</span> <span class="c1">// callback expressed as a string (PHP-style)</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">bufferObj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">erase</span><span class="o">:</span> <span class="nx">erase</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">chunk_size</span><span class="o">:</span> <span class="nx">chunk_size</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">callback</span><span class="o">:</span> <span class="nx">output_callback</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">type</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">status</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">buffer</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Fix: When else do type and status vary (see also below for non-full-status)</span>
+</span><span class='line'><span class="c1">// type: PHP_OUTPUT_HANDLER_INTERNAL (0) or PHP_OUTPUT_HANDLER_USER (1)</span>
+</span><span class='line'><span class="c1">// status: PHP_OUTPUT_HANDLER_START (0), PHP_OUTPUT_HANDLER_CONT (1) or PHP_OUTPUT_HANDLER_END (2)</span>
+</span><span class='line'><span class="c1">// Fix: Need to add the following (for ob_get_status)?:   size: 40960, block_size:10240; how to set size/block_size?</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">internalType</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">bufferObj</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">obs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">bufferObj</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">extra</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ob_start</span><span class="p">();</span> <span class="c1">// We have to start buffering ourselves if the preference is set (and no buffering on yet)</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/outcontrol/ob_start.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/outcontrol/ob_start.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ob_list_handlers function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ob_list_handlers"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ob_list_handlers</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_list_handlers</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>outcontrol/ob_list_handlers.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/outcontrol/ob_list_handlers.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ob_list_handlers</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: ob_list_handlers();</span>
+</span><span class='line'><span class="c1">// *     returns 1: [&#39;default output handler&#39;, &#39;myOwnHandler&#39;]</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">arr</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>    <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">cbname</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">getFuncName</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="sr">/\W*function\s+([\w\$]+)\s*\(/</span><span class="p">).</span><span class="nx">exec</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;(Anonymous)&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">name</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">phpjs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ini</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">ini</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span> <span class="o">||</span> <span class="o">!</span><span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;off&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;default output handler&#39;</span><span class="p">];</span> <span class="c1">// PHP doesn&#39;t return output_handler ini, even if it is set</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">cbname</span> <span class="o">=</span> <span class="nx">getFuncName</span><span class="p">(</span><span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">callback</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">name</span> <span class="o">=</span> <span class="nx">cbname</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span> <span class="o">?</span> <span class="s1">&#39;default output handler&#39;</span> <span class="o">:</span> <span class="nx">cbname</span> <span class="o">===</span> <span class="s1">&#39;URLRewriter&#39;</span> <span class="o">?</span> <span class="s1">&#39;URL-Rewriter&#39;</span> <span class="o">:</span> <span class="nx">cbname</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/outcontrol/ob_list_handlers.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/outcontrol/ob_list_handlers.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ob_get_status function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ob_get_status"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ob_get_status</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_status</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>outcontrol/ob_get_status.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/outcontrol/ob_get_status.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ob_get_status</span> <span class="p">(</span><span class="nx">full_status</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: ob_get_status(true);</span>
+</span><span class='line'><span class="c1">// *     returns 1: [{chunk_size:4096, name:myCallback, del:true, type:1,status:0}]</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">retObj</span> <span class="o">=</span> <span class="p">{},</span>
+</span><span class='line'>    <span class="nx">ob</span> <span class="o">=</span> <span class="p">{},</span>
+</span><span class='line'>    <span class="nx">retArr</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>    <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">getFuncName</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="sr">/\W*function\s+([\w\$]+)\s*\(/</span><span class="p">).</span><span class="nx">exec</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;(Anonymous)&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">name</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">phpjs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ini</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">ini</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">obs</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obs</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span><span class="p">.</span><span class="nx">local_value</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="nx">ini</span><span class="p">.</span><span class="nx">output_buffering</span><span class="p">.</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;off&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// handler itself is stored in &#39;output_handler&#39; ini</span>
+</span><span class='line'>        <span class="nx">retObj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">type</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">status</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;default output handler&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">del</span><span class="o">:</span> <span class="kc">true</span>
+</span><span class='line'>        <span class="p">};</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">full_status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">retObj</span><span class="p">.</span><span class="nx">chunk_size</span> <span class="o">=</span> <span class="mi">4096</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="p">[</span><span class="nx">retObj</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">retObj</span><span class="p">.</span><span class="nx">level</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">retObj</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">retArr</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">full_status</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">ob</span> <span class="o">=</span> <span class="nx">obs</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>        <span class="nx">name</span> <span class="o">=</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">callback</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">getFuncName</span><span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">callback</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="nx">getFuncName</span><span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">callback</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;URLRewriter&#39;</span> <span class="o">?</span> <span class="s1">&#39;URL-Rewriter&#39;</span> <span class="o">:</span> <span class="nx">getFuncName</span><span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">callback</span><span class="p">))</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">retObj</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">chunk_size</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">chunk_size</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">name</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">del</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">erase</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">type</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">type</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">status</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">status</span>
+</span><span class='line'>        <span class="p">};</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">retObj</span><span class="p">.</span><span class="nx">size</span> <span class="o">=</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">size</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">block_size</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">retObj</span><span class="p">.</span><span class="nx">block_size</span> <span class="o">=</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">block_size</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">retArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">retObj</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">retArr</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">ob</span> <span class="o">=</span> <span class="nx">obs</span><span class="p">[</span><span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="nx">name</span> <span class="o">=</span> <span class="nx">getFuncName</span><span class="p">(</span><span class="nx">ob</span><span class="p">.</span><span class="nx">callback</span><span class="p">);</span>
+</span><span class='line'><span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">level</span><span class="o">:</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">name</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">del</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">erase</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">type</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">type</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">status</span><span class="o">:</span> <span class="nx">ob</span><span class="p">.</span><span class="nx">status</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/outcontrol/ob_get_status.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/outcontrol/ob_get_status.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ob_get_level function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ob_get_level"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ob_get_level</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_level</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>outcontrol/ob_get_level.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/outcontrol/ob_get_level.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ob_get_level</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: ob_get_level();</span>
+</span><span class='line'><span class="c1">// *     returns 1: 1</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">phpjs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ini</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">ini</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">obs</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obs</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;off&#39;</span><span class="p">))</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/outcontrol/ob_get_level.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/outcontrol/ob_get_level.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ob_get_length function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ob_get_length"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ob_get_length</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_length</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>outcontrol/ob_get_length.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/outcontrol/ob_get_length.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ob_get_length</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: ob_get_length();</span>
+</span><span class='line'><span class="c1">// *     returns 1: 155</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">phpjs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ini</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">ini</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">obs</span> <span class="o">=</span> <span class="nx">phpjs</span><span class="p">.</span><span class="nx">obs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obs</span> <span class="o">||</span> <span class="o">!</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span> <span class="o">||</span> <span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;output_buffering&#39;</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;off&#39;</span><span class="p">))</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// If output was already buffered, it would be available in obs</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// Fix: WIll probably need to change depending on Unicode semantics</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">obs</span><span class="p">[</span><span class="nx">obs</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="nx">buffer</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="c1">// Retrieve length of most recently added buffer contents</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/outcontrol/ob_get_length.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/outcontrol/ob_get_length.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

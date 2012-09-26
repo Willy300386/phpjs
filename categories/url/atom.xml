@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: url | php.js]]></title>
+  <link href="http://kvz.github.com/phpjs/categories/url/atom.xml" rel="self"/>
+  <link href="http://kvz.github.com/phpjs/"/>
+  <updated>2012-09-26T17:33:01+02:00</updated>
+  <id>http://kvz.github.com/phpjs/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript http_build_query function]]></title>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/http_build_query"/>
+    <updated>2012-09-26T14:00:00+02:00</updated>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/http_build_query</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's http_build_query</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>url/http_build_query.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/url/http_build_query.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">http_build_query</span> <span class="p">(</span><span class="nx">formdata</span><span class="p">,</span> <span class="nx">numeric_prefix</span><span class="p">,</span> <span class="nx">arg_separator</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   improved by: Legaev Andrey</span>
+</span><span class='line'><span class="c1">// +   improved by: Michael White (http://getsprink.com)</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   improved by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +    revised by: stag019</span>
+</span><span class='line'><span class="c1">// +   input by: Dreamer</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: MIO_KODUKI (http://mio-koduki.blogspot.com/)</span>
+</span><span class='line'><span class="c1">// %        note 1: If the value is null, key and value is skipped in http_build_query of PHP. But, phpjs is not.</span>
+</span><span class='line'><span class="c1">// -    depends on: urlencode</span>
+</span><span class='line'><span class="c1">// *     example 1: http_build_query({foo: &#39;bar&#39;, php: &#39;hypertext processor&#39;, baz: &#39;boom&#39;, cow: &#39;milk&#39;}, &#39;&#39;, &#39;&amp;amp;amp;&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;foo=bar&amp;amp;amp;php=hypertext+processor&amp;amp;amp;baz=boom&amp;amp;amp;cow=milk&#39;</span>
+</span><span class='line'><span class="c1">// *     example 2: http_build_query({&#39;php&#39;: &#39;hypertext processor&#39;, 0: &#39;foo&#39;, 1: &#39;bar&#39;, 2: &#39;baz&#39;, 3: &#39;boom&#39;, &#39;cow&#39;: &#39;milk&#39;}, &#39;myvar_&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 2: &#39;php=hypertext+processor&amp;amp;myvar_0=foo&amp;amp;myvar_1=bar&amp;amp;myvar_2=baz&amp;amp;myvar_3=boom&amp;amp;cow=milk&#39;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>    <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">_http_build_query_helper</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">arg_separator</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">tmp</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">val</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">val</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">===</span> <span class="s2">&quot;object&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">k</span> <span class="k">in</span> <span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">val</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">tmp</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">_http_build_query_helper</span><span class="p">(</span><span class="nx">key</span> <span class="o">+</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="nx">k</span> <span class="o">+</span> <span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="nx">val</span><span class="p">[</span><span class="nx">k</span><span class="p">],</span> <span class="nx">arg_separator</span><span class="p">));</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">arg_separator</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">!==</span> <span class="s2">&quot;function&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">that</span><span class="p">.</span><span class="nx">urlencode</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="nx">that</span><span class="p">.</span><span class="nx">urlencode</span><span class="p">(</span><span class="nx">val</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;There was an error processing for http_build_query().&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">arg_separator</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">arg_separator</span> <span class="o">=</span> <span class="s2">&quot;&amp;amp;&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nx">key</span> <span class="k">in</span> <span class="nx">formdata</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">value</span> <span class="o">=</span> <span class="nx">formdata</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">numeric_prefix</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">key</span> <span class="o">=</span> <span class="nb">String</span><span class="p">(</span><span class="nx">numeric_prefix</span><span class="p">)</span> <span class="o">+</span> <span class="nx">key</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">query</span><span class="o">=</span><span class="nx">_http_build_query_helper</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">arg_separator</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">query</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">tmp</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">arg_separator</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/http_build_query.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/http_build_query.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript get_headers function]]></title>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/get_headers"/>
+    <updated>2012-09-26T14:00:00+02:00</updated>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/get_headers</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_headers</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>url/get_headers.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/url/get_headers.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">get_headers</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">format</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// +   original by: Paulo Freitas</span>
+</span><span class='line'><span class="c1">// +    bugfixed by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: array_filter</span>
+</span><span class='line'><span class="c1">// %        note 1: This function uses XmlHttpRequest and cannot retrieve resource from different domain.</span>
+</span><span class='line'><span class="c1">// %        note 1: Synchronous so may lock up browser, mainly here for study purposes.</span>
+</span><span class='line'><span class="c1">// *     example 1: get_headers(&#39;http://kevin.vanzonneveld.net/pj_test_supportfile_1.htm&#39;)[0];</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;Date: Wed, 13 May 2009 23:53:11 GMT&#39;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">.</span><span class="nx">ActiveXObject</span> <span class="o">?</span> <span class="k">new</span> <span class="nx">ActiveXObject</span><span class="p">(</span><span class="s2">&quot;Microsoft.XMLHTTP&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">req</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;XMLHttpRequest not supported&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">tmp</span><span class="p">,</span> <span class="nx">headers</span><span class="p">,</span> <span class="nx">pair</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">req</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;HEAD&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+</span><span class='line'><span class="nx">req</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">tmp</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">getAllResponseHeaders</span><span class="p">();</span>
+</span><span class='line'><span class="nx">tmp</span> <span class="o">=</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">tmp</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">array_filter</span><span class="p">(</span><span class="nx">tmp</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="nx">headers</span> <span class="o">=</span> <span class="nx">format</span> <span class="o">?</span> <span class="p">{}</span> <span class="o">:</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">tmp</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">format</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">pair</span> <span class="o">=</span> <span class="nx">tmp</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">headers</span><span class="p">[</span><span class="nx">pair</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="nx">pair</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">).</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">headers</span><span class="p">[</span><span class="nx">j</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nx">tmp</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">headers</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/get_headers.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/get_headers.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript base64_encode function]]></title>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/base64_encode"/>
+    <updated>2012-09-26T14:00:00+02:00</updated>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/base64_encode</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's base64_encode</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>url/base64_encode.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/url/base64_encode.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">base64_encode</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Tyler Akins (http://rumkin.com)</span>
+</span><span class='line'><span class="c1">// +   improved by: Bayron Guevara</span>
+</span><span class='line'><span class="c1">// +   improved by: Thunder.m</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Pellentesque Malesuada</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   improved by: Rafał Kukawski (http://kukawski.pl)</span>
+</span><span class='line'><span class="c1">// *     example 1: base64_encode(&#39;Kevin van Zonneveld&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;S2V2aW4gdmFuIFpvbm5ldmVsZA==&#39;</span>
+</span><span class='line'><span class="c1">// mozilla has this native</span>
+</span><span class='line'><span class="c1">// - but breaks in 2.0.0.12!</span>
+</span><span class='line'><span class="c1">//if (typeof this.window[&#39;btoa&#39;] == &#39;function&#39;) {</span>
+</span><span class='line'><span class="c1">//    return btoa(data);</span>
+</span><span class='line'><span class="c1">//}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">b64</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">o1</span><span class="p">,</span> <span class="nx">o2</span><span class="p">,</span> <span class="nx">o3</span><span class="p">,</span> <span class="nx">h1</span><span class="p">,</span> <span class="nx">h2</span><span class="p">,</span> <span class="nx">h3</span><span class="p">,</span> <span class="nx">h4</span><span class="p">,</span> <span class="nx">bits</span><span class="p">,</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ac</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">enc</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tmp_arr</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">do</span> <span class="p">{</span> <span class="c1">// pack three octets into four hexets</span>
+</span><span class='line'>    <span class="nx">o1</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">o2</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">o3</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">bits</span> <span class="o">=</span> <span class="nx">o1</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">16</span> <span class="o">|</span> <span class="nx">o2</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">8</span> <span class="o">|</span> <span class="nx">o3</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">h1</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">18</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0x3f</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">h2</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">12</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0x3f</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">h3</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">6</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0x3f</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">h4</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0x3f</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// use hexets to index into b64, and append result to encoded string</span>
+</span><span class='line'>    <span class="nx">tmp_arr</span><span class="p">[</span><span class="nx">ac</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">h1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">h2</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">h3</span><span class="p">)</span> <span class="o">+</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">h4</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">enc</span> <span class="o">=</span> <span class="nx">tmp_arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span> <span class="o">%</span> <span class="mi">3</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="p">(</span><span class="nx">r</span> <span class="o">?</span> <span class="nx">enc</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">r</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">:</span> <span class="nx">enc</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;===&#39;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">r</span> <span class="o">||</span> <span class="mi">3</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/base64_encode.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/base64_encode.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript base64_decode function]]></title>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/base64_decode"/>
+    <updated>2012-09-26T14:00:00+02:00</updated>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/base64_decode</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's base64_decode</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>url/base64_decode.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/url/base64_decode.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">base64_decode</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Tyler Akins (http://rumkin.com)</span>
+</span><span class='line'><span class="c1">// +   improved by: Thunder.m</span>
+</span><span class='line'><span class="c1">// +      input by: Aman Gupta</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Pellentesque Malesuada</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +      input by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// *     example 1: base64_decode(&#39;S2V2aW4gdmFuIFpvbm5ldmVsZA==&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;Kevin van Zonneveld&#39;</span>
+</span><span class='line'><span class="c1">// mozilla has this native</span>
+</span><span class='line'><span class="c1">// - but breaks in 2.0.0.12!</span>
+</span><span class='line'><span class="c1">//if (typeof this.window[&#39;atob&#39;] == &#39;function&#39;) {</span>
+</span><span class='line'><span class="c1">//    return atob(data);</span>
+</span><span class='line'><span class="c1">//}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">b64</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">o1</span><span class="p">,</span> <span class="nx">o2</span><span class="p">,</span> <span class="nx">o3</span><span class="p">,</span> <span class="nx">h1</span><span class="p">,</span> <span class="nx">h2</span><span class="p">,</span> <span class="nx">h3</span><span class="p">,</span> <span class="nx">h4</span><span class="p">,</span> <span class="nx">bits</span><span class="p">,</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">ac</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">dec</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tmp_arr</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">data</span> <span class="o">+=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">do</span> <span class="p">{</span> <span class="c1">// unpack four hexets into three octets using index points in b64</span>
+</span><span class='line'>    <span class="nx">h1</span> <span class="o">=</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">h2</span> <span class="o">=</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">h3</span> <span class="o">=</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">h4</span> <span class="o">=</span> <span class="nx">b64</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="o">++</span><span class="p">));</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">bits</span> <span class="o">=</span> <span class="nx">h1</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">18</span> <span class="o">|</span> <span class="nx">h2</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">12</span> <span class="o">|</span> <span class="nx">h3</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="mi">6</span> <span class="o">|</span> <span class="nx">h4</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">o1</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">16</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0xff</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">o2</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">8</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0xff</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">o3</span> <span class="o">=</span> <span class="nx">bits</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="mh">0xff</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">h3</span> <span class="o">==</span> <span class="mi">64</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">tmp_arr</span><span class="p">[</span><span class="nx">ac</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">o1</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">h4</span> <span class="o">==</span> <span class="mi">64</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">tmp_arr</span><span class="p">[</span><span class="nx">ac</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">o1</span><span class="p">,</span> <span class="nx">o2</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">tmp_arr</span><span class="p">[</span><span class="nx">ac</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">o1</span><span class="p">,</span> <span class="nx">o2</span><span class="p">,</span> <span class="nx">o3</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">dec</span> <span class="o">=</span> <span class="nx">tmp_arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="nx">dec</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/base64_decode.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/base64_decode.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript urlencode function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/urlencode"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/urlencode</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's urlencode</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>url/urlencode.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/url/urlencode.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">urlencode</span> <span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Philip Peterson</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +      input by: AJ</span>
+</span><span class='line'><span class="c1">// +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   improved by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +      input by: travc</span>
+</span><span class='line'><span class="c1">// +      input by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)</span>
+</span><span class='line'><span class="c1">// +   improved by: Lars Fischer</span>
+</span><span class='line'><span class="c1">// +      input by: Ratheous</span>
+</span><span class='line'><span class="c1">// +      reimplemented by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// +   bugfixed by: Joris</span>
+</span><span class='line'><span class="c1">// +      reimplemented by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %          note 1: This reflects PHP 5.3/6.0+ behavior</span>
+</span><span class='line'><span class="c1">// %        note 2: Please be aware that this function expects to encode into UTF-8 encoded strings, as found on</span>
+</span><span class='line'><span class="c1">// %        note 2: pages served as UTF-8</span>
+</span><span class='line'><span class="c1">// *     example 1: urlencode(&#39;Kevin van Zonneveld!&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;Kevin+van+Zonneveld%21&#39;</span>
+</span><span class='line'><span class="c1">// *     example 2: urlencode(&#39;http://kevin.vanzonneveld.net/&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 2: &#39;http%3A%2F%2Fkevin.vanzonneveld.net%2F&#39;</span>
+</span><span class='line'><span class="c1">// *     example 3: urlencode(&#39;http://www.google.nl/search?q=php.js&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;aq=t&amp;amp;rls=com.ubuntu:en-US:unofficial&amp;amp;client=firefox-a&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 3: &#39;http%3A%2F%2Fwww.google.nl%2Fsearch%3Fq%3Dphp.js%26ie%3Dutf-8%26oe%3Dutf-8%26aq%3Dt%26rls%3Dcom.ubuntu%3Aen-US%3Aunofficial%26client%3Dfirefox-a&#39;</span>
+</span><span class='line'><span class="nx">str</span> <span class="o">=</span> <span class="p">(</span><span class="nx">str</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Tilde should be allowed unescaped in future versions of PHP (as reflected below), but if you want to reflect current</span>
+</span><span class='line'><span class="c1">// PHP behavior, you would need to add &quot;.replace(/~/g, &#39;%7E&#39;);&quot; to the following.</span>
+</span><span class='line'><span class="k">return</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">str</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/!/g</span><span class="p">,</span> <span class="s1">&#39;%21&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&#39;/g</span><span class="p">,</span> <span class="s1">&#39;%27&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\(/g</span><span class="p">,</span> <span class="s1">&#39;%28&#39;</span><span class="p">).</span>
+</span><span class='line'><span class="nx">replace</span><span class="p">(</span><span class="sr">/\)/g</span><span class="p">,</span> <span class="s1">&#39;%29&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\*/g</span><span class="p">,</span> <span class="s1">&#39;%2A&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/%20/g</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/urlencode.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/urlencode.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

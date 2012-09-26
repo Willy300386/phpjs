@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ctype | php.js]]></title>
+  <link href="http://kvz.github.com/phpjs/categories/ctype/atom.xml" rel="self"/>
+  <link href="http://kvz.github.com/phpjs/"/>
+  <updated>2012-09-26T17:33:01+02:00</updated>
+  <id>http://kvz.github.com/phpjs/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ctype_xdigit function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ctype_xdigit"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ctype_xdigit</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_xdigit</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctype/ctype_xdigit.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/ctype/ctype_xdigit.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ctype_xdigit</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: setlocale</span>
+</span><span class='line'><span class="c1">// *     example 1: ctype_xdigit(&#39;01dF&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">text</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">setlocale</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// ensure setup of localization variables takes place</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">localeCategories</span><span class="p">.</span><span class="nx">LC_CTYPE</span><span class="p">].</span><span class="nx">LC_CTYPE</span><span class="p">.</span><span class="nx">xd</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/ctype/ctype_xdigit.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/ctype/ctype_xdigit.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ctype_upper function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ctype_upper"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ctype_upper</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_upper</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctype/ctype_upper.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/ctype/ctype_upper.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ctype_upper</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: setlocale</span>
+</span><span class='line'><span class="c1">// *     example 1: ctype_upper(&#39;AZ&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">text</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">setlocale</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// ensure setup of localization variables takes place</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">localeCategories</span><span class="p">.</span><span class="nx">LC_CTYPE</span><span class="p">].</span><span class="nx">LC_CTYPE</span><span class="p">.</span><span class="nx">up</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/ctype/ctype_upper.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/ctype/ctype_upper.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ctype_space function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ctype_space"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ctype_space</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_space</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctype/ctype_space.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/ctype/ctype_space.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ctype_space</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: setlocale</span>
+</span><span class='line'><span class="c1">// *     example 1: ctype_space(&#39;\t\n&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">text</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">setlocale</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// ensure setup of localization variables takes place</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">localeCategories</span><span class="p">.</span><span class="nx">LC_CTYPE</span><span class="p">].</span><span class="nx">LC_CTYPE</span><span class="p">.</span><span class="nx">sp</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/ctype/ctype_space.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/ctype/ctype_space.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ctype_punct function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ctype_punct"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ctype_punct</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_punct</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctype/ctype_punct.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/ctype/ctype_punct.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ctype_punct</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: setlocale</span>
+</span><span class='line'><span class="c1">// *     example 1: ctype_punct(&#39;!?&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">text</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">setlocale</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// ensure setup of localization variables takes place</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">localeCategories</span><span class="p">.</span><span class="nx">LC_CTYPE</span><span class="p">].</span><span class="nx">LC_CTYPE</span><span class="p">.</span><span class="nx">pu</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/ctype/ctype_punct.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/ctype/ctype_punct.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript ctype_print function]]></title>
+    <link href="http://kvz.github.com/phpjsfunctions/ctype_print"/>
+    <updated>2012-05-17T18:49:00+02:00</updated>
+    <id>http://kvz.github.com/phpjsfunctions/ctype_print</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_print</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctype/ctype_print.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/ctype/ctype_print.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">ctype_print</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: setlocale</span>
+</span><span class='line'><span class="c1">// *     example 1: ctype_print(&#39;AbC!#12&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">text</span> <span class="o">!==</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">setlocale</span><span class="p">(</span><span class="s1">&#39;LC_ALL&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// ensure setup of localization variables takes place</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">locales</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">localeCategories</span><span class="p">.</span><span class="nx">LC_CTYPE</span><span class="p">].</span><span class="nx">LC_CTYPE</span><span class="p">.</span><span class="nx">pr</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/ctype/ctype_print.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/ctype/ctype_print.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
