@@ -1,1680 +1,1680 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/abs</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/abs</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/acos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/acos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/acosh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/acosh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/addslashes</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/addslashes</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_info</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_info</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_methods</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_methods</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_methods_by_list</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_methods_by_list</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_methods_by_regexp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_methods_by_regexp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_properties</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_properties</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_properties_by_list</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_properties_by_list</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregate_properties_by_regexp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregate_properties_by_regexp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/aggregation_info</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/aggregation_info</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_combine</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_combine</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_count_values</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_count_values</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_fill</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_fill</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_fill_keys</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_fill_keys</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_key_exists</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_key_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_map</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_map</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_pop</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_pop</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_push</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_push</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_reduce</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_reduce</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_shift</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_shift</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_unique</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_unique</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_unshift</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_unshift</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_walk_recursive</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_walk_recursive</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/asin</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/asin</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/asinh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/asinh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/assert</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/assert</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/assert_options</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/assert_options</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/atan</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/atan</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/atan2</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/atan2</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/atanh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/atanh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/base_convert</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/base_convert</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/basename</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/basename</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcadd</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcadd</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bccomp</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bccomp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcdiv</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcdiv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcmul</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcmul</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcround</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcround</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcscale</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcscale</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bcsub</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bcsub</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bindec</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bindec</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ceil</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ceil</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/checkdate</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/checkdate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/chop</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/chop</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/chr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/chr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/chunk_split</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/chunk_split</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/class_alias</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/class_alias</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/class_exists</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/class_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_import</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_import</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_method_add</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_method_add</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_method_copy</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_method_copy</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_method_redefine</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_method_redefine</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_method_remove</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_method_remove</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/classkit_method_rename</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/classkit_method_rename</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/constant</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/constant</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/convert_uuencode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/convert_uuencode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/cos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/cos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/cosh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/cosh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/count_chars</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/count_chars</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/crc32</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/crc32</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/create_function</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/create_function</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_alnum</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_alnum</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_alpha</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_alpha</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_cntrl</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_cntrl</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_digit</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_digit</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_graph</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_graph</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_lower</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_lower</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_print</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_print</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_punct</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_punct</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_space</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_space</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_upper</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_upper</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ctype_xdigit</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ctype_xdigit</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/date_default_timezone_get</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/date_default_timezone_get</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/date_default_timezone_set</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/date_default_timezone_set</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/date_parse</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/date_parse</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/deaggregate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/deaggregate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/decbin</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/decbin</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/dechex</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/dechex</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/decoct</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/decoct</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/define</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/define</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/defined</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/defined</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/dirname</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/dirname</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/doubleval</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/doubleval</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/echo</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/echo</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/error_get_last</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/error_get_last</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/error_reporting</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/error_reporting</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/escapeshellarg</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/escapeshellarg</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/exp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/exp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/expm1</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/expm1</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fclose</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fclose</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/feof</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/feof</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fgetc</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fgetc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fgetcsv</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fgetcsv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fgets</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fgets</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fgetss</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fgetss</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/file</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/file</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/file_exists</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/file_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/file_get_contents</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/file_get_contents</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/filemtime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/filemtime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/filesize</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/filesize</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/floatval</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/floatval</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/floor</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/floor</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fmod</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fmod</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fopen</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fopen</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fpassthru</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fpassthru</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fread</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fread</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fscanf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fscanf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/fseek</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/fseek</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ftell</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ftell</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/func_get_arg</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/func_get_arg</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/func_get_args</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/func_get_args</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/func_num_args</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/func_num_args</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_cfg_var</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_cfg_var</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_class_methods</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_class_methods</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_class_vars</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_class_vars</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_declared_classes</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_declared_classes</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_defined_constants</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_defined_constants</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_defined_functions</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_defined_functions</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_defined_vars</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_defined_vars</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_include_path</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_include_path</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_included_files</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_included_files</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_meta_tags</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_meta_tags</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_object_vars</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_object_vars</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_required_files</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_required_files</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_resource_type</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_resource_type</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/getenv</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/getenv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/getlastmod</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/getlastmod</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/getrandmax</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/getrandmax</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gettimeofday</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gettimeofday</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gettype</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gettype</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gmmktime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gmmktime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gmstrftime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gmstrftime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gopher_parsedir</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gopher_parsedir</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/hexdec</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/hexdec</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/html_entity_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/html_entity_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/htmlspecialchars_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/htmlspecialchars_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/hypot</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/hypot</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/i18n_loc_get_default</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_get_default</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/i18n_loc_set_default</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_set_default</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/idate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/idate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/in_array</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/in_array</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/include</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/include</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/include_once</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/include_once</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/inet_ntop</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/inet_ntop</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/inet_pton</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/inet_pton</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ini_alter</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ini_alter</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ini_get</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ini_get</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ini_get_all</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ini_get_all</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ini_restore</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ini_restore</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ini_set</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ini_set</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ip2long</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ip2long</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_binary</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_binary</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_buffer</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_buffer</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_double</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_double</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_integer</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_integer</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_long</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_long</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_null</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_null</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_numeric</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_numeric</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_real</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_real</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_resource</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_resource</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_scalar</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_scalar</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_string</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_string</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_unicode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_unicode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/isset</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/isset</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/join</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/join</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/json_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/json_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/json_encode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/json_encode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/json_last_error</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/json_last_error</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/krsort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/krsort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ksort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ksort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/lcfirst</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/lcfirst</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/lcg_value</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/lcg_value</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/levenshtein</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/levenshtein</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/localeconv</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/localeconv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/localtime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/localtime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/log1p</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/log1p</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ltrim</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ltrim</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/md5</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/md5</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/md5_file</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/md5_file</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/method_exists</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/method_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/microtime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/microtime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/mktime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/mktime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/mt_getrandmax</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/mt_getrandmax</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/nl_langinfo</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/nl_langinfo</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_clean</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_clean</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_end_clean</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_end_clean</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_end_flush</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_end_flush</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_flush</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_flush</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_clean</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_clean</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_contents</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_contents</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_flush</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_flush</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_length</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_length</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_level</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_level</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_get_status</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_get_status</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_list_handlers</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_list_handlers</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ob_start</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ob_start</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/octdec</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/octdec</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ord</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ord</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pclose</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pclose</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/php_ini_loaded_file</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/php_ini_loaded_file</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/php_ini_scanned_files</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/php_ini_scanned_files</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/php_strip_whitespace</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/php_strip_whitespace</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/phpversion</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/phpversion</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/popen</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/popen</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pos</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pow</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pow</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/preg_grep</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/preg_grep</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/preg_quote</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/preg_quote</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/printf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/printf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/property_exists</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/property_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/putenv</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/putenv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/quoted_printable_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/quoted_printable_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/quoted_printable_encode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/quoted_printable_encode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/quotemeta</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/quotemeta</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rand</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rand</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/range</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/range</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rawurldecode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rawurldecode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rawurlencode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rawurlencode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/readfile</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/readfile</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/realpath</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/realpath</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/register_shutdown_function</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/register_shutdown_function</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/require</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/require</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/require_once</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/require_once</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/restore_include_path</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/restore_include_path</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rewind</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rewind</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/round</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/round</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rsort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rsort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rtrim</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rtrim</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_class_adopt</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_class_adopt</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_class_emancipate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_class_emancipate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_function_add</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_function_add</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_function_copy</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_function_copy</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_function_redefine</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_function_redefine</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_function_remove</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_function_remove</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_function_rename</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_function_rename</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_import</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_import</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_method_add</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_method_add</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_method_copy</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_method_copy</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_method_redefine</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_method_redefine</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_method_remove</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_method_remove</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_method_rename</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_method_rename</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/runkit_superglobals</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/runkit_superglobals</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/set_include_path</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/set_include_path</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/set_time_limit</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/set_time_limit</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/setcookie</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/setcookie</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/setrawcookie</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/setrawcookie</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/settype</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/settype</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sha1</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sha1</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sha1_file</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sha1_file</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/shuffle</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/shuffle</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/similar_text</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/similar_text</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sin</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sin</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sinh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sinh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sizeof</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sizeof</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/soundex</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/soundex</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/split</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/split</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sql_regcase</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sql_regcase</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sqrt</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sqrt</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sscanf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sscanf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_getcsv</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_getcsv</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_pad</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_pad</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_rot13</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_rot13</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_split</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_split</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_word_count</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_word_count</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strcasecmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strcasecmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strchr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strchr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strcmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strcmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strcoll</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strcoll</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strcspn</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strcspn</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_create</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_create</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_get_default</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_get_default</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_get_options</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_get_options</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_get_params</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_get_params</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_set_default</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_set_default</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_set_option</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_set_option</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_context_set_params</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_context_set_params</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_get_contents</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_get_contents</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_get_line</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_get_line</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stream_is_local</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stream_is_local</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strftime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strftime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strip_tags</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strip_tags</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stripos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stripos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stripslashes</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stripslashes</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/stristr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/stristr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strlen</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strlen</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strnatcasecmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strnatcasecmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strnatcmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strnatcmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strncasecmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strncasecmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strncmp</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strncmp</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strpbrk</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strpbrk</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strpos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strpos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strptime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strptime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strrchr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strrchr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strrev</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strrev</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strripos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strripos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strrpos</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strrpos</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strspn</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strspn</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strstr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strstr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strtok</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strtok</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strtolower</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strtolower</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strtoupper</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strtoupper</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strtr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strtr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strval</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strval</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/substr</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/substr</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/substr_compare</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/substr_compare</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/substr_replace</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/substr_replace</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/tan</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/tan</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/tanh</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/tanh</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/time</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/time</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/time_sleep_until</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/time_sleep_until</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/timezone_identifiers_list</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/timezone_identifiers_list</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/trigger_error</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/trigger_error</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/trim</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/trim</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ucfirst</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ucfirst</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/ucwords</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/ucwords</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/uksort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/uksort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/uniqid</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/uniqid</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/urldecode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/urldecode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/urlencode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/urlencode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/user_error</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/user_error</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/utf8_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/utf8_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/var_dump</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/var_dump</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/version_compare</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/version_compare</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/vprintf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/vprintf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/vsprintf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/vsprintf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/wordwrap</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/wordwrap</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/xdiff_string_diff</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/xdiff_string_diff</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/xdiff_string_patch</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/xdiff_string_patch</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/convert_cyr_string</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/convert_cyr_string</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/count</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/count</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_extension_funcs</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_extension_funcs</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/number_format</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/number_format</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/addcslashes</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/addcslashes</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_change_key_case</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_change_key_case</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_chunk</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_chunk</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_diff</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_diff</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_diff_assoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_diff_assoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_diff_key</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_diff_key</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_diff_uassoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_diff_uassoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_diff_ukey</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_diff_ukey</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_filter</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_filter</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_flip</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_flip</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_intersect</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_intersect</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_intersect_assoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_intersect_assoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_intersect_key</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_intersect_key</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_intersect_uassoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_intersect_uassoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_intersect_ukey</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_intersect_ukey</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_keys</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_keys</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_merge</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_merge</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_merge_recursive</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_merge_recursive</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_multisort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_multisort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_pad</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_pad</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_product</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_product</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_rand</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_rand</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_replace</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_replace</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_replace_recursive</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_replace_recursive</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_reverse</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_reverse</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_search</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_search</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_slice</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_slice</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_splice</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_splice</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_udiff</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_udiff</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_udiff_assoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_udiff_assoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_udiff_uassoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_udiff_uassoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_uintersect_assoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_uintersect_assoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_uintersect_uassoc</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_uintersect_uassoc</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_values</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_values</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/arsort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/arsort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/asort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/asort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/call_user_func</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/call_user_func</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/call_user_func_array</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/call_user_func_array</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/compact</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/compact</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/current</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/current</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/each</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/each</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/end</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/end</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/extract</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/extract</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/forward_static_call</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/forward_static_call</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/forward_static_call_array</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/forward_static_call_array</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/function_exists</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/function_exists</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_class</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_class</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_html_translation_table</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_html_translation_table</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/getdate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/getdate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/gmdate</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/gmdate</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/htmlentities</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/htmlentities</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/htmlspecialchars</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/htmlspecialchars</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/implode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/implode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/import_request_variables</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/import_request_variables</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/intval</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/intval</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_array</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_array</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_finite</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_finite</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_float</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_float</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_infinite</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_infinite</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_int</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_int</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_nan</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_nan</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_object</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_object</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/key</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/key</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/log</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/log</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/log10</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/log10</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/max</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/max</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/metaphone</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/metaphone</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/min</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/min</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/money_format</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/money_format</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/natcasesort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/natcasesort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/natsort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/natsort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/next</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/next</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/parse_url</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/parse_url</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pi</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pi</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/prev</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/prev</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/print_r</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/print_r</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/rad2deg</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/rad2deg</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/reset</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/reset</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/setlocale</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/setlocale</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_ireplace</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_ireplace</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_replace</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_replace</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_shuffle</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_shuffle</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/uasort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/uasort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/usort</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/usort</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
         <loc>http://kvz.github.com/phpjsfunctions/abs</loc>
@@ -3369,128 +3369,128 @@
         <lastmod>2012-09-26T18:15:00+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_sum</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_sum</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_uintersect</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_uintersect</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/array_walk</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/array_walk</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/base64_decode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/base64_decode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/base64_encode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/base64_encode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/bin2hex</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/bin2hex</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/date</loc>
-        <lastmod>2012-09-27T00:15:36+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/date</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/deg2rad</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/deg2rad</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/empty</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/empty</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/explode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/explode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/get_headers</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/get_headers</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/http_build_query</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/http_build_query</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_bool</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_bool</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/is_callable</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/is_callable</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/long2ip</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/long2ip</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/mail</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/mail</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/mt_rand</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/mt_rand</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/nl2br</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/nl2br</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pack</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pack</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/parse_str</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/parse_str</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/pathinfo</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/pathinfo</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/serialize</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/serialize</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/sprintf</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/sprintf</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/str_repeat</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/str_repeat</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/strtotime</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/strtotime</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/substr_count</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/substr_count</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/timezone_abbreviations_list</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/timezone_abbreviations_list</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/unserialize</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/unserialize</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/utf8_encode</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/utf8_encode</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://kvz.github.com/phpjsfunctions/var_export</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <loc>http://kvz.github.com/phpjs/phpjs/functions/var_export</loc>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
         <loc>http://kvz.github.com/phpjs/blog/2012/09/26/new-site/</loc>
@@ -3502,10 +3502,10 @@
     </url>
     <url>
         <loc>http://kvz.github.com/phpjs/blog/archives/</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
     <url>
         <loc>http://kvz.github.com/phpjs/</loc>
-        <lastmod>2012-09-27T00:15:37+02:00</lastmod>
+        <lastmod>2012-09-27T00:19:46+02:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: errorfunc | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/errorfunc/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-27T00:15:41+02:00</updated>
+  <updated>2012-09-27T00:19:49+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -415,9 +415,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript user_error function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/user_error"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/user_error"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/user_error</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/user_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's user_error</p>
 
 <!-- more -->

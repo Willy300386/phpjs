@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript array_multisort function - php.js</title>
+  <meta name="author" content="Kevin van Zonneveld">
+
+  
+  <meta name="description" content="A JavaScript equivalent of PHP&#8217;s array_multisort array/array_multisort.js raw on github 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kvz.github.com/phpjs/phpjs/functions/array_multisort">
+  <link href="/phpjs/favicon.png" rel="icon">
+  <link href="/phpjs/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/phpjs/javascripts/modernizr-2.0.js"></script>
+  <script src="/phpjs/javascripts/ender.js"></script>
+  <script src="/phpjs/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/phpjs/atom.xml" rel="alternate" title="php.js" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-63083-7']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="logo">
+  	<div id="logoLeft">{</div>
+  	<div id="logoText">php</div>
+  	<div id="logoRight">}</div>
+  	<div class="clear"></div>
+  </div>
+  <h1><a href="/phpjs/">.js</a></h1>
+  
+    <h2>A resource of php functions in JavsScript</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/phpjs/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kvz.github.com/phpjs" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/phpjs/about">About</a></li>
+  <li><a href="/phpjs/categories/blog/">Blog</a></li>
+  <li><a href="/phpjs/categories/functions">Functions</a></li>
+  <li><a href="https://github.com/kvz/phpjs/wiki">Wiki</a></li>
+  <li><a href="http://twitter.com/phpjs">@phpjs</a></li>
+  <li><a href="http://twitter.com/kvz">@kvz</a></li>
+  <li><a href="http://identi.ca/brettz9">@brettz9</a></li>  
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">JavaScript array_multisort function</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T13:00:00+01:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A JavaScript equivalent of PHP&#8217;s array_multisort</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span>array/array_multisort.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/array/array_multisort.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+<span class='line-number'>208</span>
+<span class='line-number'>209</span>
+<span class='line-number'>210</span>
+<span class='line-number'>211</span>
+<span class='line-number'>212</span>
+<span class='line-number'>213</span>
+<span class='line-number'>214</span>
+<span class='line-number'>215</span>
+<span class='line-number'>216</span>
+<span class='line-number'>217</span>
+<span class='line-number'>218</span>
+<span class='line-number'>219</span>
+<span class='line-number'>220</span>
+<span class='line-number'>221</span>
+<span class='line-number'>222</span>
+<span class='line-number'>223</span>
+<span class='line-number'>224</span>
+<span class='line-number'>225</span>
+<span class='line-number'>226</span>
+<span class='line-number'>227</span>
+<span class='line-number'>228</span>
+<span class='line-number'>229</span>
+<span class='line-number'>230</span>
+<span class='line-number'>231</span>
+<span class='line-number'>232</span>
+<span class='line-number'>233</span>
+<span class='line-number'>234</span>
+<span class='line-number'>235</span>
+<span class='line-number'>236</span>
+<span class='line-number'>237</span>
+<span class='line-number'>238</span>
+<span class='line-number'>239</span>
+<span class='line-number'>240</span>
+<span class='line-number'>241</span>
+<span class='line-number'>242</span>
+<span class='line-number'>243</span>
+<span class='line-number'>244</span>
+<span class='line-number'>245</span>
+<span class='line-number'>246</span>
+<span class='line-number'>247</span>
+<span class='line-number'>248</span>
+<span class='line-number'>249</span>
+<span class='line-number'>250</span>
+<span class='line-number'>251</span>
+<span class='line-number'>252</span>
+<span class='line-number'>253</span>
+<span class='line-number'>254</span>
+<span class='line-number'>255</span>
+<span class='line-number'>256</span>
+<span class='line-number'>257</span>
+<span class='line-number'>258</span>
+<span class='line-number'>259</span>
+<span class='line-number'>260</span>
+<span class='line-number'>261</span>
+<span class='line-number'>262</span>
+<span class='line-number'>263</span>
+<span class='line-number'>264</span>
+<span class='line-number'>265</span>
+<span class='line-number'>266</span>
+<span class='line-number'>267</span>
+<span class='line-number'>268</span>
+<span class='line-number'>269</span>
+<span class='line-number'>270</span>
+<span class='line-number'>271</span>
+<span class='line-number'>272</span>
+<span class='line-number'>273</span>
+<span class='line-number'>274</span>
+<span class='line-number'>275</span>
+<span class='line-number'>276</span>
+<span class='line-number'>277</span>
+<span class='line-number'>278</span>
+<span class='line-number'>279</span>
+<span class='line-number'>280</span>
+<span class='line-number'>281</span>
+<span class='line-number'>282</span>
+<span class='line-number'>283</span>
+<span class='line-number'>284</span>
+<span class='line-number'>285</span>
+<span class='line-number'>286</span>
+<span class='line-number'>287</span>
+<span class='line-number'>288</span>
+<span class='line-number'>289</span>
+<span class='line-number'>290</span>
+<span class='line-number'>291</span>
+<span class='line-number'>292</span>
+<span class='line-number'>293</span>
+<span class='line-number'>294</span>
+<span class='line-number'>295</span>
+<span class='line-number'>296</span>
+<span class='line-number'>297</span>
+<span class='line-number'>298</span>
+<span class='line-number'>299</span>
+<span class='line-number'>300</span>
+<span class='line-number'>301</span>
+<span class='line-number'>302</span>
+<span class='line-number'>303</span>
+<span class='line-number'>304</span>
+<span class='line-number'>305</span>
+<span class='line-number'>306</span>
+<span class='line-number'>307</span>
+<span class='line-number'>308</span>
+<span class='line-number'>309</span>
+<span class='line-number'>310</span>
+<span class='line-number'>311</span>
+<span class='line-number'>312</span>
+<span class='line-number'>313</span>
+<span class='line-number'>314</span>
+<span class='line-number'>315</span>
+<span class='line-number'>316</span>
+<span class='line-number'>317</span>
+<span class='line-number'>318</span>
+<span class='line-number'>319</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">array_multisort</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// +   original by: Theriault</span>
+</span><span class='line'>    <span class="c1">// *     example 1: array_multisort([1, 2, 1, 2, 1, 2], [1, 2, 3, 4, 5, 6]);</span>
+</span><span class='line'>    <span class="c1">// *     returns 1: true</span>
+</span><span class='line'>    <span class="c1">// *     example 2: characters = {A: &#39;Edward&#39;, B: &#39;Locke&#39;, C: &#39;Sabin&#39;, D: &#39;Terra&#39;, E: &#39;Edward&#39;};</span>
+</span><span class='line'>    <span class="c1">// *     example 2: jobs = {A: &#39;Warrior&#39;, B: &#39;Thief&#39;, C: &#39;Monk&#39;, D: &#39;Mage&#39;, E: &#39;Knight&#39;};</span>
+</span><span class='line'>    <span class="c1">// *     example 2: array_multisort(characters, &#39;SORT_DESC&#39;, &#39;SORT_STRING&#39;, jobs, &#39;SORT_ASC&#39;, &#39;SORT_STRING&#39;);</span>
+</span><span class='line'>    <span class="c1">// *     returns 2: true</span>
+</span><span class='line'>    <span class="c1">// *     results 2: characters == {D: &#39;Terra&#39;, C: &#39;Sabin&#39;, B: &#39;Locke&#39;, E: &#39;Edward&#39;, A: &#39;Edward&#39;};</span>
+</span><span class='line'>    <span class="c1">// *     results 2: jobs == {D: &#39;Mage&#39;, C: &#39;Monk&#39;, B: &#39;Thief&#39;, E: &#39;Knight&#39;, A: &#39;Warrior&#39;};</span>
+</span><span class='line'>    <span class="c1">// *     example 3: lastnames = [ &#39;Carter&#39;,&#39;Adams&#39;,&#39;Monroe&#39;,&#39;Tyler&#39;,&#39;Madison&#39;,&#39;Kennedy&#39;,&#39;Adams&#39;];</span>
+</span><span class='line'>    <span class="c1">// *     example 3: firstnames = [&#39;James&#39;, &#39;John&#39; ,&#39;James&#39;, &#39;John&#39;, &#39;James&#39;,  &#39;John&#39;,   &#39;John&#39;];</span>
+</span><span class='line'>    <span class="c1">// *     example 3: president = [ 39,      6,      5,       10,     4,       35,        2    ];</span>
+</span><span class='line'>    <span class="c1">// *     example 3: array_multisort(firstnames, &#39;SORT_DESC&#39;, &#39;SORT_STRING&#39;, lastnames, &#39;SORT_ASC&#39;, &#39;SORT_STRING&#39;, president, &#39;SORT_NUMERIC&#39;);</span>
+</span><span class='line'>    <span class="c1">// *     returns 3: true</span>
+</span><span class='line'>    <span class="c1">// *     results 3: firstnames == [&#39;John&#39;, &#39;John&#39;, &#39;John&#39;,   &#39;John&#39;, &#39;James&#39;, &#39;James&#39;,  &#39;James&#39;];</span>
+</span><span class='line'>    <span class="c1">// *     results 3: lastnames ==  [&#39;Adams&#39;,&#39;Adams&#39;,&#39;Kennedy&#39;,&#39;Tyler&#39;,&#39;Carter&#39;,&#39;Madison&#39;,&#39;Monroe&#39;];</span>
+</span><span class='line'>    <span class="c1">// *     results 3: president ==  [2,      6,      35,       10,     39,       4,       5];</span>
+</span><span class='line'>    <span class="c1">// Fix: this function must be fixed like asort(), etc., to return a (shallow) copy by default, since IE does not support!</span>
+</span><span class='line'>    <span class="c1">// VARIABLE DESCRIPTIONS</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// flags: Translation table for sort arguments. Each argument turns on certain bits in the flag byte through addition.</span>
+</span><span class='line'>    <span class="c1">//        bits:    HGFE DCBA</span>
+</span><span class='line'>    <span class="c1">//        bit A: Only turned on if SORT_NUMERIC was an argument.</span>
+</span><span class='line'>    <span class="c1">//        bit B: Only turned on if SORT_STRING was an argument.</span>
+</span><span class='line'>    <span class="c1">//        bit C: Reserved bit for SORT_ASC; not turned on.</span>
+</span><span class='line'>    <span class="c1">//        bit D: Only turned on if SORT_DESC was an argument.</span>
+</span><span class='line'>    <span class="c1">//        bit E: Turned on if either SORT_REGULAR, SORT_NUMERIC, or SORT_STRING was an argument. If already turned on, function would return FALSE like in PHP.</span>
+</span><span class='line'>    <span class="c1">//        bit F: Turned on if either SORT_ASC or SORT_DESC was an argument. If already turned on, function would return FALSE like in PHP.</span>
+</span><span class='line'>    <span class="c1">//        bit G and H: (Unused)</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortFlag: Holds sort flag byte of every array argument.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortArrs: Holds the values of array arguments.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortKeys: Holds the keys of object arguments.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// nLastSort: Holds a copy of the current lastSort so that the lastSort is not destroyed</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// nLastSort: Holds a copy of the current lastSort so that the lastSort is not destroyed</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// args: Holds pointer to arguments for reassignment</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// lastSort: Holds the last Javascript sort pattern to duplicate the sort for the last sortComponent.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// lastSorts: Holds the lastSort for each sortComponent to duplicate the sort of each component on each array.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// tmpArray: Holds a copy of the last sortComponent&#39;s array elements to reiterate over the array</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// elIndex: Holds the index of the last sortComponent&#39;s array elements to reiterate over the array</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortDuplicator: Function for duplicating previous sort.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortRegularASC: Function for sorting regular, ascending.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortRegularDESC: Function for sorting regular, descending.</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// thingsToSort: Holds a bit that indicates which indexes in the arrays can be sorted. Updated after every array is sorted.</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">argl</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sal</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">flags</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>            <span class="s1">&#39;SORT_REGULAR&#39;</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
+</span><span class='line'>            <span class="s1">&#39;SORT_NUMERIC&#39;</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+</span><span class='line'>            <span class="s1">&#39;SORT_STRING&#39;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+</span><span class='line'>            <span class="s1">&#39;SORT_ASC&#39;</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+</span><span class='line'>            <span class="s1">&#39;SORT_DESC&#39;</span><span class="o">:</span> <span class="mi">40</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="nx">sortArrs</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>            <span class="p">[]</span>
+</span><span class='line'>        <span class="p">],</span>
+</span><span class='line'>        <span class="nx">sortFlag</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span><span class='line'>        <span class="nx">sortKeys</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>            <span class="p">[]</span>
+</span><span class='line'>        <span class="p">],</span>
+</span><span class='line'>        <span class="nx">g</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">k</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">thingsToSort</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="nx">vkey</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">zlast</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">args</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">nLastSort</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="nx">lastSort</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="nx">lastSorts</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="nx">tmpArray</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>        <span class="nx">elIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sortDuplicator</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">nLastSort</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">},</span>
+</span><span class='line'>        <span class="nx">sortFunctions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>            <span class="p">[</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&lt;</span> <span class="nx">b</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">));</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">a</span> <span class="o">&gt;</span> <span class="nx">b</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&lt;</span> <span class="nx">b</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">b</span> <span class="o">&gt;</span> <span class="nx">a</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">(</span><span class="nx">b</span> <span class="o">&lt;</span> <span class="nx">a</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">));</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">b</span> <span class="o">&gt;</span> <span class="nx">a</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">(</span><span class="nx">b</span> <span class="o">&lt;</span> <span class="nx">a</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}],</span>
+</span><span class='line'>            <span class="p">[</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">);</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">b</span> <span class="o">-</span> <span class="nx">a</span><span class="p">);</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nx">b</span> <span class="o">-</span> <span class="nx">a</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}],</span>
+</span><span class='line'>            <span class="p">[</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">));</span>
+</span><span class='line'>                <span class="k">return</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">lastSort</span><span class="p">.</span><span class="nx">push</span><span class="p">((</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">((</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">));</span>
+</span><span class='line'>                <span class="k">return</span> <span class="p">(</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="p">((</span><span class="nx">b</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}]</span>
+</span><span class='line'>        <span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Store first argument into sortArrs and sortKeys if an Object.</span>
+</span><span class='line'>    <span class="c1">// First Argument should be either a Javascript Array or an Object, otherwise function would return FALSE like in PHP</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="o">===</span> <span class="s1">&#39;[object Array]&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">sortArrs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">arr</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">sortKeys</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span><span class='line'>                <span class="nx">sortArrs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// arrMainLength: Holds the length of the first array. All other arrays must be of equal length, otherwise function would return FALSE like in PHP</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>    <span class="c1">// sortComponents: Holds 2 indexes per every section of the array that can be sorted. As this is the start, the whole array can be sorted.</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">arrMainLength</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">sortComponents</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">arrMainLength</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Loop through all other arguments, checking lengths and sort flags of arrays and adding them to the above variables.</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">argl</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="o">===</span> <span class="s1">&#39;[object Array]&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>            <span class="nx">sortFlag</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">length</span> <span class="o">!==</span> <span class="nx">arrMainLength</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="nx">sortFlag</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</span><span class='line'>                    <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="nx">i</span><span class="p">]);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">length</span> <span class="o">!==</span> <span class="nx">arrMainLength</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">lFlag</span> <span class="o">=</span> <span class="nx">sortFlag</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">flags</span><span class="p">[</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]]</span> <span class="o">===</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">||</span> <span class="p">((((</span><span class="nx">flags</span><span class="p">[</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]])</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="nx">lFlag</span> <span class="o">&gt;&gt;&gt;</span> <span class="mi">4</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// Keep extra parentheses around latter flags check to avoid minimization leading to CDATA closer</span>
+</span><span class='line'>                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="nx">sortFlag</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">lFlag</span> <span class="o">+</span> <span class="nx">flags</span><span class="p">[</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">j</span><span class="p">]]);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">!==</span> <span class="nx">arrMainLength</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">thingsToSort</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Sort all the arrays....</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">sortArrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">lastSorts</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="nx">tmpArray</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="nx">elIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">nLastSort</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="nx">lastSort</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// If ther are no sortComponents, then no more sorting is neeeded. Copy the array back to the argument.</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">===</span> <span class="s1">&#39;[object Array]&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">for</span> <span class="p">(</span><span class="nx">k</span> <span class="k">in</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">k</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="k">delete</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">k</span><span class="p">];</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                    <span class="nx">sal</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>                    <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">vkey</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">sal</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="nx">vkey</span> <span class="o">=</span> <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                        <span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">vkey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>                <span class="k">delete</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>                <span class="k">delete</span> <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>                <span class="k">continue</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// Sort function for sorting. Either sorts asc or desc, regular/string or numeric.</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">sFunction</span> <span class="o">=</span> <span class="nx">sortFunctions</span><span class="p">[(</span><span class="nx">sortFlag</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">3</span><span class="p">)][((</span><span class="nx">sortFlag</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// Sort current array.</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">l</span> <span class="o">!==</span> <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">l</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">tmpArray</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">],</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                <span class="nx">tmpArray</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sFunction</span><span class="p">);</span>
+</span><span class='line'>                <span class="nx">lastSorts</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">lastSort</span><span class="p">);</span> <span class="c1">// Is there a better way to copy an array in Javascript?</span>
+</span><span class='line'>                <span class="nx">elIndex</span> <span class="o">=</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">];</span>
+</span><span class='line'>                <span class="k">for</span> <span class="p">(</span><span class="nx">g</span> <span class="k">in</span> <span class="nx">tmpArray</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="nx">tmpArray</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">g</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">elIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">tmpArray</span><span class="p">[</span><span class="nx">g</span><span class="p">];</span>
+</span><span class='line'>                        <span class="nx">elIndex</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// Duplicate the sorting of the current array on future arrays.</span>
+</span><span class='line'>            <span class="nx">sFunction</span> <span class="o">=</span> <span class="nx">sortDuplicator</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="k">in</span> <span class="nx">sortArrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">j</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">continue</span><span class="p">;</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                    <span class="k">for</span> <span class="p">(</span><span class="nx">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">l</span> <span class="o">!==</span> <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">l</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="nx">tmpArray</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">],</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                        <span class="nx">nLastSort</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">lastSorts</span><span class="p">[</span><span class="nx">l</span><span class="p">]);</span> <span class="c1">// alert(l + &#39;:&#39; + nLastSort);</span>
+</span><span class='line'>                        <span class="nx">tmpArray</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sFunction</span><span class="p">);</span>
+</span><span class='line'>                        <span class="nx">elIndex</span> <span class="o">=</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">];</span>
+</span><span class='line'>                        <span class="k">for</span> <span class="p">(</span><span class="nx">g</span> <span class="k">in</span> <span class="nx">tmpArray</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="k">if</span> <span class="p">(</span><span class="nx">tmpArray</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">g</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                                <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="nx">elIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">tmpArray</span><span class="p">[</span><span class="nx">g</span><span class="p">];</span>
+</span><span class='line'>                                <span class="nx">elIndex</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>                            <span class="p">}</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// Duplicate the sorting of the current array on array keys</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="k">in</span> <span class="nx">sortKeys</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">sortKeys</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">j</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">for</span> <span class="p">(</span><span class="nx">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">l</span> <span class="o">!==</span> <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">l</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="nx">tmpArray</span> <span class="o">=</span> <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">],</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                        <span class="nx">nLastSort</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">lastSorts</span><span class="p">[</span><span class="nx">l</span><span class="p">]);</span>
+</span><span class='line'>                        <span class="nx">tmpArray</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sFunction</span><span class="p">);</span>
+</span><span class='line'>                        <span class="nx">elIndex</span> <span class="o">=</span> <span class="nx">sortComponents</span><span class="p">[</span><span class="nx">l</span><span class="p">];</span>
+</span><span class='line'>                        <span class="k">for</span> <span class="p">(</span><span class="nx">g</span> <span class="k">in</span> <span class="nx">tmpArray</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="k">if</span> <span class="p">(</span><span class="nx">tmpArray</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">g</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                                <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="nx">elIndex</span><span class="p">]</span> <span class="o">=</span> <span class="nx">tmpArray</span><span class="p">[</span><span class="nx">g</span><span class="p">];</span>
+</span><span class='line'>                                <span class="nx">elIndex</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>                            <span class="p">}</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">// Generate the next sortComponents</span>
+</span><span class='line'>            <span class="nx">zlast</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">sortComponents</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>            <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="k">in</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">j</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">thingsToSort</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="p">((</span><span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                        <span class="nx">zlast</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>                        <span class="k">continue</span><span class="p">;</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="p">(</span><span class="nx">zlast</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="nx">zlast</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                                <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                                <span class="nx">thingsToSort</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>                            <span class="p">}</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                        <span class="nx">zlast</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="p">(</span><span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">!==</span> <span class="nx">zlast</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>                            <span class="nx">zlast</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">sortComponents</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">sortComponents</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">===</span> <span class="s1">&#39;[object Array]&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="k">in</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">j</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">delete</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>                <span class="nx">sal</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>                <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">vkey</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">sal</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="nx">vkey</span> <span class="o">=</span> <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                    <span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">vkey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">delete</span> <span class="nx">sortArrs</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>            <span class="k">delete</span> <span class="nx">sortKeys</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/array/array_multisort.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/array/array_multisort.js">edit on github</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Kevin van Zonneveld</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T13:00:00+01:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/phpjs/categories/array/'>array</a>, <a class='category' href='/phpjs/categories/functions/'>functions</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kvz.github.com/phpjs/phpjs/functions/array_multisort" data-via="phpjs" data-counturl="http://kvz.github.com/phpjs/phpjs/functions/array_multisort" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/phpjs/phpjs/functions/array_merge_recursive" title="Previous Post: JavaScript array_merge_recursive function">&laquo; JavaScript array_merge_recursive function</a>
+      
+      
+        <a class="basic-alignment right articlenav" href="/phpjs/phpjs/functions/array_pad" title="Next Post: JavaScript array_pad function">JavaScript array_pad function &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/phpjs/phpjs/categories/array'>array (148)</a></li><li><a href='/phpjs/phpjs/categories/bc'>bc (14)</a></li><li><a href='/phpjs/phpjs/categories/blog'>blog (1)</a></li><li><a href='/phpjs/phpjs/categories/classkit'>classkit (12)</a></li><li><a href='/phpjs/phpjs/categories/classobj'>classobj (18)</a></li><li><a href='/phpjs/phpjs/categories/ctype'>ctype (22)</a></li><li><a href='/phpjs/phpjs/categories/datetime'>datetime (37)</a></li><li><a href='/phpjs/phpjs/categories/errorfunc'>errorfunc (8)</a></li><li><a href='/phpjs/phpjs/categories/exec'>exec (2)</a></li><li><a href='/phpjs/phpjs/categories/filesystem'>filesystem (49)</a></li><li><a href='/phpjs/phpjs/categories/funchand'>funchand (22)</a></li><li><a href='/phpjs/phpjs/categories/functions'>functions (873)</a></li><li><a href='/phpjs/phpjs/categories/i18n'>i18n (4)</a></li><li><a href='/phpjs/phpjs/categories/info'>info (46)</a></li><li><a href='/phpjs/phpjs/categories/json'>json (6)</a></li><li><a href='/phpjs/phpjs/categories/language'>language (8)</a></li><li><a href='/phpjs/phpjs/categories/mail'>mail (1)</a></li><li><a href='/phpjs/phpjs/categories/math'>math (90)</a></li><li><a href='/phpjs/phpjs/categories/misc'>misc (13)</a></li><li><a href='/phpjs/phpjs/categories/net-gopher'>net-gopher (2)</a></li><li><a href='/phpjs/phpjs/categories/network'>network (11)</a></li><li><a href='/phpjs/phpjs/categories/objaggregation'>objaggregation (20)</a></li><li><a href='/phpjs/phpjs/categories/outcontrol'>outcontrol (24)</a></li><li><a href='/phpjs/phpjs/categories/pcre'>pcre (6)</a></li><li><a href='/phpjs/phpjs/categories/runkit'>runkit (28)</a></li><li><a href='/phpjs/phpjs/categories/stream'>stream (20)</a></li><li><a href='/phpjs/phpjs/categories/strings'>strings (174)</a></li><li><a href='/phpjs/phpjs/categories/url'>url (18)</a></li><li><a href='/phpjs/phpjs/categories/var'>var (62)</a></li><li><a href='/phpjs/phpjs/categories/xdiff'>xdiff (4)</a></li><li><a href='/phpjs/phpjs/categories/xml'>xml (4)</a></li></ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("phpjs", 10, false);
+    });
+  </script>
+  <script src="/phpjs/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/phpjs" class="twitter-follow-button" data-show-count="false">Follow @phpjs</a>
+  
+</section>
+
+<section>
+  <h1>Banners</h1>
+  
+
+  <a href="http://www.pledgie.com/campaigns/5962"><img alt="Click here to lend your support to: phpjs and make a donation at www.pledgie.com !" src="http://www.pledgie.com/campaigns/5962.png?skin_name=chrome" border="0"></a>
+
+  <iframe src="http://api.flattr.com/button/view/?url=http%3A%2F%2Fphpjs.org&amp;" width="55" height="62" frameborder="0" scrolling="no" border="0" marginheight="0" marginwidth="0" allowtransparency="true"></iframe>
+
+  
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Kevin van Zonneveld -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+   -
+  <span class="credit">Theme by <a href="http://melandri.net/2012/07/23/darkstripes-octopress-theme-released/">alessandro melandri</a></span>
+</p>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'phpjs';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kvz.github.com/phpjs/phpjs/functions/array_multisort';
+        var disqus_url = 'http://kvz.github.com/phpjs/phpjs/functions/array_multisort';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

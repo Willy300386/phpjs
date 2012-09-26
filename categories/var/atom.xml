@@ -4,7 +4,7 @@
   <title><![CDATA[Category: var | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/var/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-27T00:15:41+02:00</updated>
+  <updated>2012-09-27T00:19:49+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript var_export function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/var_export"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/var_export"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/var_export</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/var_export</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's var_export</p>
 
 <!-- more -->
@@ -269,9 +269,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript unserialize function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/unserialize"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/unserialize"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/unserialize</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/unserialize</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's unserialize</p>
 
 <!-- more -->
@@ -609,9 +609,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript serialize function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/serialize"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/serialize"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/serialize</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/serialize</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's serialize</p>
 
 <!-- more -->
@@ -877,9 +877,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript is_callable function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/is_callable"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/is_callable"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/is_callable</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/is_callable</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's is_callable</p>
 
 <!-- more -->
@@ -1013,9 +1013,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript is_bool function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/is_bool"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/is_bool"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/is_bool</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/is_bool</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's is_bool</p>
 
 <!-- more -->

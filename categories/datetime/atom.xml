@@ -4,7 +4,7 @@
   <title><![CDATA[Category: datetime | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/datetime/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-27T00:15:41+02:00</updated>
+  <updated>2012-09-27T00:19:49+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript timezone_abbreviations_list function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/timezone_abbreviations_list"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/timezone_abbreviations_list"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/timezone_abbreviations_list</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/timezone_abbreviations_list</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's timezone_abbreviations_list</p>
 
 <!-- more -->
@@ -4953,9 +4953,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript strtotime function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/strtotime"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/strtotime"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/strtotime</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/strtotime</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's strtotime</p>
 
 <!-- more -->
@@ -5341,9 +5341,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript date function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/date"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/date"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/date</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/date</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's date</p>
 
 <!-- more -->

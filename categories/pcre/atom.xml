@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pcre | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/pcre/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-27T00:15:41+02:00</updated>
+  <updated>2012-09-27T00:19:49+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -243,9 +243,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript sql_regcase function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/sql_regcase"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/sql_regcase"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/sql_regcase</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/sql_regcase</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sql_regcase</p>
 
 <!-- more -->
@@ -319,9 +319,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript preg_quote function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/preg_quote"/>
+    <link href="http://kvz.github.com/phpjs/phpjs/functions/preg_quote"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/preg_quote</id>
+    <id>http://kvz.github.com/phpjs/phpjs/functions/preg_quote</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's preg_quote</p>
 
 <!-- more -->
