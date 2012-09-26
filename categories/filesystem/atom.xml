@@ -4,7 +4,7 @@
   <title><![CDATA[Category: filesystem | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/filesystem/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-26T18:37:15+02:00</updated>
+  <updated>2012-09-27T00:15:41+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript pathinfo function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/pathinfo"/>
+    <link href="http://kvz.github.com/phpjsfunctions/pathinfo"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/pathinfo</id>
+    <id>http://kvz.github.com/phpjsfunctions/pathinfo</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's pathinfo</p>
 
 <!-- more -->

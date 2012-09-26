@@ -4,7 +4,7 @@
   <title><![CDATA[Category: i18n | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/i18n/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-26T18:37:15+02:00</updated>
+  <updated>2012-09-27T00:15:41+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -145,9 +145,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript i18n_loc_set_default function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_set_default"/>
+    <link href="http://kvz.github.com/phpjsfunctions/i18n_loc_set_default"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_set_default</id>
+    <id>http://kvz.github.com/phpjsfunctions/i18n_loc_set_default</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's i18n_loc_set_default</p>
 
 <!-- more -->
@@ -219,9 +219,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript i18n_loc_get_default function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_get_default"/>
+    <link href="http://kvz.github.com/phpjsfunctions/i18n_loc_get_default"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/i18n_loc_get_default</id>
+    <id>http://kvz.github.com/phpjsfunctions/i18n_loc_get_default</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's i18n_loc_get_default</p>
 
 <!-- more -->

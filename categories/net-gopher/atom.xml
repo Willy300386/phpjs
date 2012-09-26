@@ -4,7 +4,7 @@
   <title><![CDATA[Category: net-gopher | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/net-gopher/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-26T18:37:15+02:00</updated>
+  <updated>2012-09-27T00:15:41+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -189,9 +189,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript gopher_parsedir function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/gopher_parsedir"/>
+    <link href="http://kvz.github.com/phpjsfunctions/gopher_parsedir"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/gopher_parsedir</id>
+    <id>http://kvz.github.com/phpjsfunctions/gopher_parsedir</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's gopher_parsedir</p>
 
 <!-- more -->

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: strings | php.js]]></title>
   <link href="http://kvz.github.com/phpjs/categories/strings/atom.xml" rel="self"/>
   <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-09-26T18:37:15+02:00</updated>
+  <updated>2012-09-27T00:15:41+02:00</updated>
   <id>http://kvz.github.com/phpjs/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript substr_count function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/substr_count"/>
+    <link href="http://kvz.github.com/phpjsfunctions/substr_count"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/substr_count</id>
+    <id>http://kvz.github.com/phpjsfunctions/substr_count</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's substr_count</p>
 
 <!-- more -->
@@ -109,9 +109,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript str_repeat function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/str_repeat"/>
+    <link href="http://kvz.github.com/phpjsfunctions/str_repeat"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/str_repeat</id>
+    <id>http://kvz.github.com/phpjsfunctions/str_repeat</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's str_repeat</p>
 
 <!-- more -->
@@ -181,9 +181,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript sprintf function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/sprintf"/>
+    <link href="http://kvz.github.com/phpjsfunctions/sprintf"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/sprintf</id>
+    <id>http://kvz.github.com/phpjsfunctions/sprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sprintf</p>
 
 <!-- more -->
@@ -571,9 +571,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript parse_str function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/parse_str"/>
+    <link href="http://kvz.github.com/phpjsfunctions/parse_str"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/parse_str</id>
+    <id>http://kvz.github.com/phpjsfunctions/parse_str</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's parse_str</p>
 
 <!-- more -->
@@ -821,9 +821,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript nl2br function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/nl2br"/>
+    <link href="http://kvz.github.com/phpjsfunctions/nl2br"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/nl2br</id>
+    <id>http://kvz.github.com/phpjsfunctions/nl2br</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's nl2br</p>
 
 <!-- more -->
