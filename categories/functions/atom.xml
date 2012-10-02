@@ -4,7 +4,7 @@
   <title><![CDATA[Category: functions | ]]></title>
   <link href="http://phpjs.org/categories/functions/atom.xml" rel="self"/>
   <link href="http://phpjs.org/"/>
-  <updated>2012-10-02T03:03:19+02:00</updated>
+  <updated>2012-10-02T03:15:10+02:00</updated>
   <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[JavaScript xdiff_string_patch function]]></title>
     <link href="http://phpjs.org/functions/xdiff_string_patch"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-xdiff_string_patch</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's xdiff_string_patch</p>
 
@@ -378,8 +378,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_patch.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_patch.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_patch.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_patch.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -388,7 +388,7 @@
   <entry>
     <title type="html"><![CDATA[JavaScript xdiff_string_diff function]]></title>
     <link href="http://phpjs.org/functions/xdiff_string_diff"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-xdiff_string_diff</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's xdiff_string_diff</p>
 
@@ -1280,8 +1280,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_diff.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_diff.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_diff.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_diff.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1290,7 +1290,7 @@
   <entry>
     <title type="html"><![CDATA[JavaScript wordwrap function]]></title>
     <link href="http://phpjs.org/functions/wordwrap"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-wordwrap</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's wordwrap</p>
 
@@ -1376,8 +1376,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/wordwrap.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/wordwrap.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/wordwrap.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/wordwrap.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1386,7 +1386,7 @@
   <entry>
     <title type="html"><![CDATA[JavaScript vsprintf function]]></title>
     <link href="http://phpjs.org/functions/vsprintf"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-vsprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's vsprintf</p>
 
@@ -1418,8 +1418,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vsprintf.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vsprintf.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vsprintf.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vsprintf.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1428,7 +1428,7 @@
   <entry>
     <title type="html"><![CDATA[JavaScript vprintf function]]></title>
     <link href="http://phpjs.org/functions/vprintf"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-vprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's vprintf</p>
 
@@ -1498,8 +1498,8 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vprintf.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vprintf.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vprintf.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vprintf.js">edit on github</a></li>
 </ul>
 
 ]]></content>

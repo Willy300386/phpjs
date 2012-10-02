@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php i18n extension | ]]></title>
+  <link href="http://phpjs.org/categories/php-i18n-extension/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:15:10+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript i18n_loc_set_default function]]></title>
+    <link href="http://phpjs.org/functions/i18n_loc_set_default"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-i18n_loc_set_default</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's i18n_loc_set_default</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>i18n/i18n_loc_set_default.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/i18n/i18n_loc_set_default.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">i18n_loc_set_default</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %          note 1: Renamed in PHP6 from locale_set_default(). Not listed yet at php.net</span>
+</span><span class='line'><span class="c1">// %          note 2: List of locales at http://demo.icu-project.org/icu-bin/locexp (use for implementing other locales here)</span>
+</span><span class='line'><span class="c1">// %          note 3: To be usable with sort() if it is passed the SORT_LOCALE_STRING sorting flag: http://php.net/manual/en/function.sort.php</span>
+</span><span class='line'><span class="c1">// *     example 1: i18n_loc_set_default(&#39;pt_PT&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">i18nLocales</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">en_US_POSIX</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">sorting</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">str1</span><span class="p">,</span> <span class="nx">str2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Fix: This one taken from strcmp, but need for other locales; we don&#39;t use localeCompare since its locale is not settable</span>
+</span><span class='line'>            <span class="k">return</span> <span class="p">(</span><span class="nx">str1</span> <span class="o">==</span> <span class="nx">str2</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="p">((</span><span class="nx">str1</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">str2</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">i18nLocale</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/i18n/i18n_loc_set_default.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/i18n/i18n_loc_set_default.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript i18n_loc_get_default function]]></title>
+    <link href="http://phpjs.org/functions/i18n_loc_get_default"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-i18n_loc_get_default</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's i18n_loc_get_default</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>i18n/i18n_loc_get_default.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/i18n/i18n_loc_get_default.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">i18n_loc_get_default</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %          note 1: Renamed in PHP6 from locale_get_default(). Not listed yet at php.net</span>
+</span><span class='line'><span class="c1">// %          note 2: List of locales at http://demo.icu-project.org/icu-bin/locexp</span>
+</span><span class='line'><span class="c1">// %          note 3: To be usable with sort() if it is passed the SORT_LOCALE_STRING sorting flag: http://php.net/manual/en/function.sort.php</span>
+</span><span class='line'><span class="c1">// -    depends on: i18n_loc_set_default</span>
+</span><span class='line'><span class="c1">// *     example 1: i18n_loc_get_default();</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;en_US_POSIX&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">i18nLocale</span> <span class="o">||</span> <span class="p">(</span><span class="nx">i18n_loc_set_default</span><span class="p">(</span><span class="s1">&#39;en_US_POSIX&#39;</span><span class="p">),</span> <span class="s1">&#39;en_US_POSIX&#39;</span><span class="p">);</span> <span class="c1">// Ensure defaults are set up</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/i18n/i18n_loc_get_default.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/i18n/i18n_loc_get_default.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

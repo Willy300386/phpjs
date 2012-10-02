@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php errorfunc extension | ]]></title>
+  <link href="http://phpjs.org/categories/php-errorfunc-extension/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:15:10+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript user_error function]]></title>
+    <link href="http://phpjs.org/functions/user_error"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-user_error</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's user_error</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>errorfunc/user_error.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/errorfunc/user_error.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">user_error</span> <span class="p">(</span><span class="nx">error_msg</span><span class="p">,</span> <span class="nx">error_type</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: trigger_error</span>
+</span><span class='line'><span class="c1">// *     example 1: user_error(&#39;Cannot divide by zero&#39;, 256);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">trigger_error</span><span class="p">(</span><span class="nx">error_msg</span><span class="p">,</span> <span class="nx">error_type</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/user_error.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/user_error.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript trigger_error function]]></title>
+    <link href="http://phpjs.org/functions/trigger_error"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-trigger_error</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's trigger_error</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>errorfunc/trigger_error.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/errorfunc/trigger_error.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">trigger_error</span> <span class="p">(</span><span class="nx">error_msg</span><span class="p">,</span> <span class="nx">error_type</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %        note 1: Although this function should only allow the E_USER_ types, we&#39;ll allow the</span>
+</span><span class='line'><span class="c1">// %        note 1: others here in order to be able to simulate more types (though should not trigger</span>
+</span><span class='line'><span class="c1">// %        note 1: aggregates like E_STRICT or E_ALL).</span>
+</span><span class='line'><span class="c1">// %        note 1: See also our experimental at() function (to mimic the @ error suppressor)</span>
+</span><span class='line'><span class="c1">// -    depends on: echo</span>
+</span><span class='line'><span class="c1">// *     example 1: trigger_error(&#39;This will just be a notice&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Fix: get to work with set_error_handler()&#39;s handler when that is added</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">type</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">prepend</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">append</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error_type</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">error_type</span> <span class="o">=</span> <span class="s1">&#39;E_USER_NOTICE&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">ini_on</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">ini</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">((</span><span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toString</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;on&#39;</span> <span class="o">||</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;true&#39;</span><span class="p">))</span> <span class="o">||</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="nx">ini</span><span class="p">].</span><span class="nx">local_value</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">===</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">display_errors</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_reporting</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">that</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_reporting</span><span class="p">.</span><span class="nx">local_value</span><span class="p">)</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ini_on</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">TYPES</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// Including all types for completeness, but should not trigger aggregates like E_STRICT or E_ALL</span>
+</span><span class='line'>    <span class="nx">E_ERROR</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Fatal run-time errors. These indicate errors that can not be recovered from, such as a memory allocation problem. Execution of the script is halted.</span>
+</span><span class='line'>    <span class="nx">E_WARNING</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Run-time warnings (non-fatal errors). Execution of the script is not halted.</span>
+</span><span class='line'>    <span class="nx">E_PARSE</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Compile-time parse errors. Parse errors should only be generated by the parser.</span>
+</span><span class='line'>    <span class="nx">E_NOTICE</span><span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Run-time notices. Indicate that the script encountered something that could indicate an error, but could also happen in the normal course of running a script.</span>
+</span><span class='line'>    <span class="nx">E_CORE_ERROR</span><span class="o">:</span> <span class="mi">16</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Fatal errors that occur during PHP&#39;s initial startup. This is like an E_ERROR, except it is generated by the core of PHP.</span>
+</span><span class='line'>    <span class="nx">E_CORE_WARNING</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Warnings (non-fatal errors) that occur during PHP&#39;s initial startup. This is like an E_WARNING, except it is generated by the core of PHP.</span>
+</span><span class='line'>    <span class="nx">E_COMPILE_ERROR</span><span class="o">:</span> <span class="mi">64</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Fatal compile-time errors. This is like an E_ERROR, except it is generated by the Zend Scripting Engine.</span>
+</span><span class='line'>    <span class="nx">E_COMPILE_WARNING</span><span class="o">:</span> <span class="mi">128</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Compile-time warnings (non-fatal errors). This is like an E_WARNING, except it is generated by the Zend Scripting Engine.</span>
+</span><span class='line'>    <span class="nx">E_USER_ERROR</span><span class="o">:</span> <span class="mi">256</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// User-generated error message. This is like an E_ERROR, except it is generated in PHP code by using the PHP function trigger_error().</span>
+</span><span class='line'>    <span class="nx">E_USER_WARNING</span><span class="o">:</span> <span class="mi">512</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// User-generated warning message. This is like an E_WARNING, except it is generated in PHP code by using the PHP function trigger_error().</span>
+</span><span class='line'>    <span class="nx">E_USER_NOTICE</span><span class="o">:</span> <span class="mi">1024</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// User-generated notice message. This is like an E_NOTICE, except it is generated in PHP code by using the PHP function trigger_error().</span>
+</span><span class='line'>    <span class="nx">E_STRICT</span><span class="o">:</span> <span class="mi">2048</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Enable to have PHP suggest changes to your code which will ensure the best interoperability and forward compatibility of your code.</span>
+</span><span class='line'>    <span class="nx">E_RECOVERABLE_ERROR</span><span class="o">:</span> <span class="mi">4096</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Catchable fatal error. It indicates that a probably dangerous error occured, but did not leave the Engine in an unstable state. If the error is not caught by a user defined handle (see also set_error_handler()), the application aborts as it was an E_ERROR.</span>
+</span><span class='line'>    <span class="nx">E_DEPRECATED</span><span class="o">:</span> <span class="mi">8192</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Run-time notices. Enable this to receive warnings about code that will not work in future versions.</span>
+</span><span class='line'>    <span class="nx">E_USER_DEPRECATED</span><span class="o">:</span> <span class="mi">16384</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// User-generated warning message. This is like an E_DEPRECATED, except it is generated in PHP code by using the PHP function trigger_error().</span>
+</span><span class='line'>    <span class="nx">E_ALL</span><span class="o">:</span> <span class="mi">30719</span> <span class="c1">// All errors and warnings, as supported, except of level E_STRICT in PHP &amp;lt; 6.     in:32767, // PHP 6, in:30719, // PHP 5.3.x, in:6143, // PHP 5.2.x, previously:2047, //</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">error_type</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">type</span> <span class="o">=</span> <span class="nx">error_type</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Allow for a single string or an array of string flags</span>
+</span><span class='line'>    <span class="nx">error_type</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">error_type</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">error_type</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Resolve string input to bitwise</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">TYPES</span><span class="p">[</span><span class="nx">error_type</span><span class="p">[</span><span class="nx">i</span><span class="p">]])</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span> <span class="o">|</span> <span class="nx">TYPES</span><span class="p">[</span><span class="nx">error_type</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// BEGIN REDUNDANT</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'><span class="c1">// END REDUNDANT</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_USER_ERROR</span> <span class="o">||</span> <span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_ERROR</span> <span class="o">||</span> <span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_CORE_ERROR</span> <span class="o">||</span> <span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_COMPILE_ERROR</span> <span class="o">||</span> <span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_RECOVERABLE_ERROR</span> <span class="o">||</span> <span class="nx">type</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_PARSE</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">ini_on</span><span class="p">(</span><span class="s1">&#39;track_errors&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">$php_errormsg</span> <span class="o">=</span> <span class="nx">error_msg</span><span class="p">;</span> <span class="c1">// Can assign to this global, as in PHP (see http://php.net/manual/en/reserved.variables.phperrormsg.php )</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">display_errors</span><span class="p">(</span><span class="nx">type</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">prepend</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_prepend_string</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_prepend_string</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">append</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_append_string</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">error_append_string</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="nx">prepend</span> <span class="o">+</span> <span class="s1">&#39;Error: &#39;</span> <span class="o">+</span> <span class="nx">error_msg</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">append</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error_msg</span><span class="p">);</span> <span class="c1">// Might, for Mozilla, allow to somehow pass in a fileName and lineNumber (2nd and 3rd arguments to Error)</span>
+</span><span class='line'>    <span class="nx">e</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="nx">type</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">last_error</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">message</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">file</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">fileName</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">line</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">lineNumber</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">type</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">type</span>
+</span><span class='line'>    <span class="p">};</span> <span class="c1">// fileName and lineNumber presently not working (see note just above)</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="nx">e</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">display_errors</span><span class="p">(</span><span class="nx">type</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">switch</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_USER_WARNING</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_WARNING</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_CORE_WARNING</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_COMPILE_WARNING</span><span class="o">:</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="s1">&#39;Warning: &#39;</span> <span class="o">+</span> <span class="nx">error_msg</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_USER_NOTICE</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_NOTICE</span><span class="o">:</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="s1">&#39;Notice: &#39;</span> <span class="o">+</span> <span class="nx">error_msg</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_DEPRECATED</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">case</span> <span class="nx">TYPES</span><span class="p">.</span><span class="nx">E_USER_DEPRECATED</span><span class="o">:</span>
+</span><span class='line'>        <span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="s1">&#39;Deprecated: &#39;</span> <span class="o">+</span> <span class="nx">error_msg</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="s1">&#39;Unrecognized error type&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/trigger_error.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/trigger_error.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript error_reporting function]]></title>
+    <link href="http://phpjs.org/functions/error_reporting"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-error_reporting</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's error_reporting</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>errorfunc/error_reporting.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/errorfunc/error_reporting.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">error_reporting</span> <span class="p">(</span><span class="nx">level</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// -    depends on: ini_set</span>
+</span><span class='line'><span class="c1">// %        note 1: This will not set a global_value or access level for the ini item</span>
+</span><span class='line'><span class="c1">// %        note 2: If you wish the default value to be as in PHP, you must manually set it</span>
+</span><span class='line'><span class="c1">// %        note 3: This function depends on functions implementing error handling</span>
+</span><span class='line'><span class="c1">// %        note 4: See also our at() error suppressor function (@ operator in PHP) in experimental/language/</span>
+</span><span class='line'><span class="c1">// *     example 1: error_reporting(1);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 6135</span>
+</span><span class='line'><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ini_set</span><span class="p">(</span><span class="s1">&#39;error_reporting&#39;</span><span class="p">,</span> <span class="nx">level</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/error_reporting.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/error_reporting.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript error_get_last function]]></title>
+    <link href="http://phpjs.org/functions/error_get_last"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-error_get_last</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's error_get_last</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>errorfunc/error_get_last.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/errorfunc/error_get_last.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">error_get_last</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: error_get_last();</span>
+</span><span class='line'><span class="c1">// *     returns 1: null</span>
+</span><span class='line'><span class="c1">// *     example 2: error_get_last();</span>
+</span><span class='line'><span class="c1">// *     returns 2: {type: 256, message: &#39;My user error&#39;, file: &#39;C:\WWW\index.php&#39;, line: 2}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">last_error</span> <span class="o">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">last_error</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Only set if error triggered within at() or trigger_error()</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/error_get_last.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/error_get_last.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php exec extension | ]]></title>
+  <link href="http://phpjs.org/categories/php-exec-extension/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:15:10+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript escapeshellarg function]]></title>
+    <link href="http://phpjs.org/functions/escapeshellarg"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-escapeshellarg</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's escapeshellarg</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>exec/escapeshellarg.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/exec/escapeshellarg.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">escapeshellarg</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Felix Geisendoerfer (http://www.debuggable.com/felix)</span>
+</span><span class='line'><span class="c1">// +   improved by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: escapeshellarg(&quot;kevin&#39;s birthday&quot;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &quot;&#39;kevin\&#39;s birthday&#39;&quot;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">ret</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">ret</span> <span class="o">=</span> <span class="nx">arg</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[^\\]&#39;/g</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">m</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">m</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;\\\&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="s2">&quot;&#39;&quot;</span> <span class="o">+</span> <span class="nx">ret</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/exec/escapeshellarg.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/exec/escapeshellarg.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

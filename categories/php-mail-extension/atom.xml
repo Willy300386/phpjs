@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php mail extension | ]]></title>
+  <link href="http://phpjs.org/categories/php-mail-extension/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:15:10+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript mail function]]></title>
+    <link href="http://phpjs.org/functions/mail"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-mail</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's mail</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>mail/mail.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/mail/mail.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">mail</span> <span class="p">(</span><span class="nx">to</span><span class="p">,</span> <span class="nx">subject</span><span class="p">,</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">additional_headers</span><span class="p">,</span> <span class="nx">additional_parameters</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %          note 1: Currently only works if the SSJS SendMail method is available</span>
+</span><span class='line'><span class="c1">// %          note 1: and also depends on the ini having been set for &#39;sendmail_from&#39;;</span>
+</span><span class='line'><span class="c1">// %          note 1: There currently is no CommonJS email API: http://wiki.commonjs.org/wiki/Email</span>
+</span><span class='line'><span class="c1">// %          note 2: &#39;additional_parameters&#39; argument is not supported</span>
+</span><span class='line'><span class="c1">// *     example 1: mail(&#39;you@example.com&#39;, &#39;Hi!&#39;, &quot;What&#39;s been going on lately?&quot;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="c1">// *     example 2: mail(&quot;jack@example.com, barry@example.net&quot;, &#39;ok subj&#39;, &#39;my message&#39;,</span>
+</span><span class='line'><span class="c1">// *     example 2:           &#39;From: jack@example.com\r\n&#39;+&#39;Organization : Example Corp\r\n&#39;+</span>
+</span><span class='line'><span class="c1">// *     example 2:           &#39;Content-type: text/html;charset=utf8&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 2: true</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">_append</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">sm</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sm</span><span class="p">[</span><span class="nx">prop</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// Ok?</span>
+</span><span class='line'>        <span class="nx">sm</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">sm</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">sm</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">.</span><span class="nx">SendMail</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// See http://web.archive.org/web/20070219200401/http://research.nihonsoft.org/javascript/ServerReferenceJS12/sendmail.htm</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">sm</span> <span class="o">=</span> <span class="k">new</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">.</span><span class="nx">SendMail</span><span class="p">();</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">from</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">sendmail_from</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">.</span><span class="nx">sendmail_from</span><span class="p">.</span><span class="nx">local_value</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">sm</span><span class="p">.</span><span class="nx">To</span> <span class="o">=</span> <span class="nx">to</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">sm</span><span class="p">.</span><span class="nx">Subject</span> <span class="o">=</span> <span class="nx">subject</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">sm</span><span class="p">.</span><span class="nx">Body</span> <span class="o">=</span> <span class="nx">message</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">sm</span><span class="p">.</span><span class="nx">From</span> <span class="o">=</span> <span class="nx">from</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">additional_headers</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="nx">additional_headers</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\r?\n/</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">headers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">header</span> <span class="o">=</span> <span class="nx">headers</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">colonPos</span> <span class="o">=</span> <span class="nx">header</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">colonPos</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Malformed headers&#39;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">prop</span> <span class="o">=</span> <span class="nx">header</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">colonPos</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">header</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">colonPos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+</span><span class='line'>            <span class="k">switch</span> <span class="p">(</span><span class="nx">prop</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                <span class="c1">// Todo: Add any others to this top fall-through which can allow multiple headers</span>
+</span><span class='line'>                <span class="c1">//                via commas; will otherwise be overwritten (Errorsto, Replyto?)</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;Bcc&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Fall-through</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;Cc&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Fall-through</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;To&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Apparently appendable with additional headers per PHP examples</span>
+</span><span class='line'>                <span class="nx">_append</span><span class="p">(</span><span class="nx">sm</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</span><span class='line'>                <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;Subject&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Overridable in additional headers?</span>
+</span><span class='line'>                <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;Body&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Overridable in additional headers?</span>
+</span><span class='line'>                <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="s1">&#39;From&#39;</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">// Default, though can be overridden</span>
+</span><span class='line'>                <span class="cm">/* Fall-through */</span>
+</span><span class='line'>            <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>                <span class="c1">//  Errorsto, Organization, Replyto, Smtpserver</span>
+</span><span class='line'>                <span class="nx">sm</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+</span><span class='line'>                <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">sm</span><span class="p">.</span><span class="nx">From</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Warning: mail(): &quot;sendmail_from&quot; not set in php.ini&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">sm</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/mail/mail.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/mail/mail.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

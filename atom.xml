@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://phpjs.org/atom.xml" rel="self"/>
   <link href="http://phpjs.org/"/>
-  <updated>2012-10-02T03:03:19+02:00</updated>
+  <updated>2012-10-02T03:15:10+02:00</updated>
   <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
@@ -67,7 +67,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript xdiff_string_patch function]]></title>
     <link href="http://phpjs.org/functions/xdiff_string_patch"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-xdiff_string_patch</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s xdiff_string_patch</p>
 
@@ -425,11 +425,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_patch.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_patch.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_patch.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_patch.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -438,7 +436,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript xdiff_string_diff function]]></title>
     <link href="http://phpjs.org/functions/xdiff_string_diff"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-xdiff_string_diff</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s xdiff_string_diff</p>
 
@@ -1284,11 +1282,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_diff.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_diff.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xdiff/xdiff_string_diff.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xdiff/xdiff_string_diff.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1297,7 +1293,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript wordwrap function]]></title>
     <link href="http://phpjs.org/functions/wordwrap"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-wordwrap</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s wordwrap</p>
 
@@ -1379,11 +1375,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/wordwrap.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/wordwrap.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/wordwrap.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/wordwrap.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1392,7 +1386,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript vsprintf function]]></title>
     <link href="http://phpjs.org/functions/vsprintf"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-vsprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s vsprintf</p>
 
@@ -1420,11 +1414,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vsprintf.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vsprintf.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vsprintf.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vsprintf.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1433,7 +1425,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript vprintf function]]></title>
     <link href="http://phpjs.org/functions/vprintf"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-vprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s vprintf</p>
 
@@ -1499,11 +1491,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vprintf.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vprintf.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/vprintf.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/vprintf.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1512,7 +1502,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript version_compare function]]></title>
     <link href="http://phpjs.org/functions/version_compare"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-version_compare</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s version_compare</p>
 
@@ -1752,11 +1742,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/info/version_compare.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/info/version_compare.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/info/version_compare.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/info/version_compare.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -1765,7 +1753,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript var_export function]]></title>
     <link href="http://phpjs.org/functions/var_export"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-var_export</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s var_export</p>
 
@@ -2005,11 +1993,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/var_export.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/var_export.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/var_export.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/var_export.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2018,7 +2004,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript var_dump function]]></title>
     <link href="http://phpjs.org/functions/var_dump"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-var_dump</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s var_dump</p>
 
@@ -2346,11 +2332,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/var_dump.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/var_dump.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/var_dump.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/var_dump.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2359,7 +2343,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript utf8_encode function]]></title>
     <link href="http://phpjs.org/functions/utf8_encode"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-utf8_encode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s utf8_encode</p>
 
@@ -2473,11 +2457,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xml/utf8_encode.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xml/utf8_encode.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xml/utf8_encode.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xml/utf8_encode.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2486,7 +2468,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript utf8_decode function]]></title>
     <link href="http://phpjs.org/functions/utf8_decode"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-utf8_decode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s utf8_decode</p>
 
@@ -2578,11 +2560,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/xml/utf8_decode.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/xml/utf8_decode.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/xml/utf8_decode.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/xml/utf8_decode.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2591,7 +2571,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript usort function]]></title>
     <link href="http://phpjs.org/functions/usort"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-usort</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s usort</p>
 
@@ -2713,11 +2693,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/array/usort.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/array/usort.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/array/usort.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/array/usort.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2726,7 +2704,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript user_error function]]></title>
     <link href="http://phpjs.org/functions/user_error"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-user_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s user_error</p>
 
@@ -2754,11 +2732,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/user_error.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/user_error.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/errorfunc/user_error.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/errorfunc/user_error.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2767,7 +2743,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript urlencode function]]></title>
     <link href="http://phpjs.org/functions/urlencode"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-urlencode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s urlencode</p>
 
@@ -2843,11 +2819,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/urlencode.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/urlencode.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/urlencode.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/urlencode.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2856,7 +2830,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript urldecode function]]></title>
     <link href="http://phpjs.org/functions/urldecode"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-urldecode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s urldecode</p>
 
@@ -2924,11 +2898,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/urldecode.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/urldecode.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/url/urldecode.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/url/urldecode.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -2937,7 +2909,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript unserialize function]]></title>
     <link href="http://phpjs.org/functions/unserialize"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-unserialize</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s unserialize</p>
 
@@ -3263,11 +3235,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/unserialize.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/unserialize.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/var/unserialize.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/var/unserialize.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -3276,7 +3246,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript uniqid function]]></title>
     <link href="http://phpjs.org/functions/uniqid"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-uniqid</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s uniqid</p>
 
@@ -3380,11 +3350,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/misc/uniqid.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/misc/uniqid.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/misc/uniqid.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/misc/uniqid.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -3393,7 +3361,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript uksort function]]></title>
     <link href="http://phpjs.org/functions/uksort"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-uksort</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s uksort</p>
 
@@ -3545,11 +3513,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/array/uksort.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/array/uksort.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/array/uksort.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/array/uksort.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -3558,7 +3524,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript ucwords function]]></title>
     <link href="http://phpjs.org/functions/ucwords"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-ucwords</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s ucwords</p>
 
@@ -3602,11 +3568,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/ucwords.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/ucwords.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/ucwords.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/ucwords.js">edit on github</a></li>
 </ul>
 
 ]]></content>
@@ -3615,7 +3579,7 @@ make the project ready for the future.</p>
   <entry>
     <title type="html"><![CDATA[JavaScript ucfirst function]]></title>
     <link href="http://phpjs.org/functions/ucfirst"/>
-    <updated>2010-10-10T12:10:10+02:00</updated>
+    <updated>2010-10-10T00:00:00+02:00</updated>
     <id>http://phpjs.org/functions/function-ucfirst</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s ucfirst</p>
 
@@ -3649,11 +3613,9 @@ make the project ready for the future.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
 <ul>
- <li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/ucfirst.js">view on github</a></li>
- <li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/ucfirst.js">edit on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/strings/ucfirst.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/strings/ucfirst.js">edit on github</a></li>
 </ul>
 
 ]]></content>

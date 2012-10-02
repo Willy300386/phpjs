@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php runkit extension | ]]></title>
+  <link href="http://phpjs.org/categories/php-runkit-extension/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:15:10+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript runkit_superglobals function]]></title>
+    <link href="http://phpjs.org/functions/runkit_superglobals"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-runkit_superglobals</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_superglobals</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>runkit/runkit_superglobals.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/runkit/runkit_superglobals.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">runkit_superglobals</span> <span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// %          note 1: You must manually define the superglobals to be able to use them.</span>
+</span><span class='line'><span class="c1">// %          note 2: Another alternative (though you can&#39;t reflect on them with this function) is to use import_request_variables()</span>
+</span><span class='line'><span class="c1">// *     example 1: runkit_superglobals();</span>
+</span><span class='line'><span class="c1">// *     returns 1: []</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">superglobal</span> <span class="o">=</span> <span class="p">{},</span>
+</span><span class='line'>    <span class="nx">p</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">superglobals</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$_GET&#39;</span><span class="p">,</span> <span class="s1">&#39;$_POST&#39;</span><span class="p">,</span> <span class="s1">&#39;$_REQUEST&#39;</span><span class="p">,</span> <span class="s1">&#39;$_COOKIE&#39;</span><span class="p">,</span> <span class="s1">&#39;$_SESSION&#39;</span><span class="p">,</span> <span class="s1">&#39;$_SERVER&#39;</span><span class="p">,</span> <span class="s1">&#39;$_ENV&#39;</span><span class="p">,</span> <span class="s1">&#39;$_FILES&#39;</span><span class="p">];</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">superglobals</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">superglobal</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">superglobals</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="nx">p</span> <span class="k">in</span> <span class="nx">superglobal</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">superglobal</span><span class="p">[</span><span class="nx">p</span><span class="p">]);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/runkit/runkit_superglobals.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/runkit/runkit_superglobals.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript runkit_method_rename function]]></title>
+    <link href="http://phpjs.org/functions/runkit_method_rename"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-runkit_method_rename</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_rename</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>runkit/runkit_method_rename.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/runkit/runkit_method_rename.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">runkit_method_rename</span> <span class="p">(</span><span class="nx">classname</span><span class="p">,</span> <span class="nx">methodname</span><span class="p">,</span> <span class="nx">newname</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: runkit_method_rename(&#39;someClass&#39;, &#39;someMethod&#39;, &#39;newMethod&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">getFuncName</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="sr">/\W*function\s+([\w\$]+)\s*\(/</span><span class="p">).</span><span class="nx">exec</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;(Anonymous)&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">name</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">classname</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">classname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">classname</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="cm">/*&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">&lt;pre&gt;&lt;code&gt;var method = classname[methodname]; // Static</span>
+</span><span class='line'><span class="cm">classname[newname] = method;</span>
+</span><span class='line'><span class="cm">delete classname[methodname];</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">getFuncName</span><span class="p">(</span><span class="nx">classname</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;PHP_JS&#39;</span> <span class="o">||</span> <span class="c1">// By default, don&#39;t allow overriding of PHP functions</span>
+</span><span class='line'><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="kc">true</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;1&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;true&#39;</span><span class="p">)))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">method</span> <span class="o">=</span> <span class="nx">classname</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">methodname</span><span class="p">];</span>
+</span><span class='line'>    <span class="nx">classname</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">newname</span><span class="p">]</span> <span class="o">=</span> <span class="nx">method</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">classname</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">methodname</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/runkit/runkit_method_rename.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/runkit/runkit_method_rename.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript runkit_method_remove function]]></title>
+    <link href="http://phpjs.org/functions/runkit_method_remove"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-runkit_method_remove</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_remove</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>runkit/runkit_method_remove.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/runkit/runkit_method_remove.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">runkit_method_remove</span> <span class="p">(</span><span class="nx">classname</span><span class="p">,</span> <span class="nx">methodname</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: runkit_method_remove(&#39;someClass&#39;, &#39;someMethod&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">classname</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">classname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">classname</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">getFuncName</span><span class="p">(</span><span class="nx">classname</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;PHP_JS&#39;</span> <span class="o">||</span> <span class="c1">// By default, don&#39;t allow overriding of PHP functions</span>
+</span><span class='line'><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="kc">true</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;1&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;true&#39;</span><span class="p">)))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">classname</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">methodname</span><span class="p">];</span> <span class="c1">// Delete any on prototype</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// delete classname[methodname]; // Delete any as static class method</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/runkit/runkit_method_remove.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/runkit/runkit_method_remove.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript runkit_method_redefine function]]></title>
+    <link href="http://phpjs.org/functions/runkit_method_redefine"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-runkit_method_redefine</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_redefine</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>runkit/runkit_method_redefine.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/runkit/runkit_method_redefine.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">runkit_method_redefine</span> <span class="p">(</span><span class="nx">classname</span><span class="p">,</span> <span class="nx">methodname</span><span class="p">,</span> <span class="nx">args</span><span class="p">,</span> <span class="nx">code</span><span class="p">,</span> <span class="nx">flags</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: runkit_method_redefine(&#39;someClass&#39;, &#39;someMethod&#39;, &#39;a,b&#39;, &#39;return a+b&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="c1">// In JavaScript, this is identical to runkit_method_add</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">argmnts</span> <span class="o">=</span> <span class="p">[],</span>
+</span><span class='line'>    <span class="nx">func</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">getFuncName</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="sr">/\W*function\s+([\w\$]+)\s*\(/</span><span class="p">).</span><span class="nx">exec</span><span class="p">(</span><span class="nx">fn</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s1">&#39;(Anonymous)&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">name</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">switch</span> <span class="p">(</span><span class="nx">flags</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="k">case</span> <span class="s1">&#39;RUNKIT_ACC_PROTECTED&#39;</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="s1">&#39;Protected not supported&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">case</span> <span class="s1">&#39;RUNKIT_ACC_PRIVATE&#39;</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">throw</span> <span class="s1">&#39;Private not supported&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">case</span> <span class="s1">&#39;RUNKIT_ACC_PUBLIC&#39;</span><span class="o">:</span>
+</span><span class='line'><span class="k">default</span><span class="o">:</span>
+</span><span class='line'>    <span class="k">break</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">argmnts</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/,\s*/</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">classname</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">classname</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">classname</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">getFuncName</span><span class="p">(</span><span class="nx">classname</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;PHP_JS&#39;</span> <span class="o">||</span> <span class="c1">// By default, don&#39;t allow overriding of PHP functions</span>
+</span><span class='line'><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">]</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="kc">true</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="mi">1</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;1&#39;</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">ini</span><span class="p">[</span><span class="s1">&#39;runkit.internal_override&#39;</span><span class="p">].</span><span class="nx">local_value</span> <span class="o">===</span> <span class="s1">&#39;true&#39;</span><span class="p">)))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Could use the following to add as a static method to the class</span>
+</span><span class='line'>    <span class="c1">//        func = Function.apply(null, argmnts.concat(code));</span>
+</span><span class='line'>    <span class="c1">//            classname[methodname] = func;</span>
+</span><span class='line'>    <span class="nx">func</span> <span class="o">=</span> <span class="nb">Function</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">argmnts</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">code</span><span class="p">));</span>
+</span><span class='line'>    <span class="nx">classname</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">methodname</span><span class="p">]</span> <span class="o">=</span> <span class="nx">func</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/runkit/runkit_method_redefine.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/runkit/runkit_method_redefine.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript runkit_method_copy function]]></title>
+    <link href="http://phpjs.org/functions/runkit_method_copy"/>
+    <updated>2010-10-10T00:00:00+02:00</updated>
+    <id>http://phpjs.org/functions/function-runkit_method_copy</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_copy</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>runkit/runkit_method_copy.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/runkit/runkit_method_copy.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">runkit_method_copy</span> <span class="p">(</span><span class="nx">dClass</span><span class="p">,</span> <span class="nx">dMethod</span><span class="p">,</span> <span class="nx">sClass</span><span class="p">,</span> <span class="nx">sMethod</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: runkit_method_copy(&#39;newClass&#39;, &#39;newMethod&#39;, &#39;someClass&#39;, &#39;someMethod&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="cm">/*&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">&lt;pre&gt;&lt;code&gt;function A(){}</span>
+</span><span class='line'><span class="cm">function C(){}</span>
+</span><span class='line'><span class="cm">C.d = function () {alert(&#39;inside d&#39;);}</span>
+</span><span class='line'><span class="cm">runkit_method_copy(&#39;A&#39;, &#39;b&#39;, &#39;C&#39;, &#39;d&#39;);</span>
+</span><span class='line'><span class="cm">A.b(); // &#39;inside d&#39;</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'><span class="nx">sMethod</span> <span class="o">=</span> <span class="nx">sMethod</span> <span class="o">||</span> <span class="nx">dMethod</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">dClass</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">dClass</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">dClass</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">sClass</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">sClass</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nb">window</span><span class="p">[</span><span class="nx">sClass</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//dClass[dMethod] = sClass[sMethod]; // Copy from static to static method (as per PHP example)</span>
+</span><span class='line'><span class="nx">dClass</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">dMethod</span><span class="p">]</span> <span class="o">=</span> <span class="nx">sClass</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">sMethod</span><span class="p">];</span> <span class="c1">// To copy from instance to instance</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><a href="https://github.com/kvz/phpjs/blob/master/functions/runkit/runkit_method_copy.js">view on github</a></li>
+<li><a href="https://github.com/kvz/phpjs/edit/master/functions/runkit/runkit_method_copy.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
