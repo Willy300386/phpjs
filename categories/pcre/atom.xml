@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: pcre | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/pcre/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: pcre | ]]></title>
+  <link href="http://phpjs.org/categories/pcre/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript sql_regcase function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/sql_regcase"/>
+    <link href="http://phpjs.orgfunctions/sql_regcase"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/sql_regcase</id>
+    <id>http://phpjs.orgfunctions/sql_regcase</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sql_regcase</p>
 
 <!-- more -->
@@ -91,9 +91,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript preg_quote function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/preg_quote"/>
+    <link href="http://phpjs.orgfunctions/preg_quote"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/preg_quote</id>
+    <id>http://phpjs.orgfunctions/preg_quote</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's preg_quote</p>
 
 <!-- more -->
@@ -147,9 +147,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript preg_grep function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/preg_grep"/>
+    <link href="http://phpjs.orgfunctions/preg_grep"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/preg_grep</id>
+    <id>http://phpjs.orgfunctions/preg_grep</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's preg_grep</p>
 
 <!-- more -->
@@ -243,9 +243,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript sql_regcase function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/sql_regcase"/>
+    <link href="http://phpjs.org/functions/sql_regcase"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/sql_regcase</id>
+    <id>http://phpjs.org/functions/sql_regcase</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sql_regcase</p>
 
 <!-- more -->
@@ -319,9 +319,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript preg_quote function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/preg_quote"/>
+    <link href="http://phpjs.org/functions/preg_quote"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/preg_quote</id>
+    <id>http://phpjs.org/functions/preg_quote</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's preg_quote</p>
 
 <!-- more -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: stream | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/stream/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: stream | ]]></title>
+  <link href="http://phpjs.org/categories/stream/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript stream_is_local function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/stream_is_local"/>
+    <link href="http://phpjs.orgfunctions/stream_is_local"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/stream_is_local</id>
+    <id>http://phpjs.orgfunctions/stream_is_local</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_is_local</p>
 
 <!-- more -->
@@ -63,9 +63,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript stream_get_line function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/stream_get_line"/>
+    <link href="http://phpjs.orgfunctions/stream_get_line"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/stream_get_line</id>
+    <id>http://phpjs.orgfunctions/stream_get_line</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_get_line</p>
 
 <!-- more -->
@@ -147,9 +147,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript stream_get_contents function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/stream_get_contents"/>
+    <link href="http://phpjs.orgfunctions/stream_get_contents"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/stream_get_contents</id>
+    <id>http://phpjs.orgfunctions/stream_get_contents</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_get_contents</p>
 
 <!-- more -->
@@ -213,9 +213,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript stream_context_set_params function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/stream_context_set_params"/>
+    <link href="http://phpjs.orgfunctions/stream_context_set_params"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/stream_context_set_params</id>
+    <id>http://phpjs.orgfunctions/stream_context_set_params</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_context_set_params</p>
 
 <!-- more -->
@@ -275,9 +275,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript stream_context_set_option function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/stream_context_set_option"/>
+    <link href="http://phpjs.orgfunctions/stream_context_set_option"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/stream_context_set_option</id>
+    <id>http://phpjs.orgfunctions/stream_context_set_option</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_context_set_option</p>
 
 <!-- more -->

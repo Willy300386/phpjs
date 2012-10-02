@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: classobj | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/classobj/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: classobj | ]]></title>
+  <link href="http://phpjs.org/categories/classobj/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript property_exists function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/property_exists"/>
+    <link href="http://phpjs.orgfunctions/property_exists"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/property_exists</id>
+    <id>http://phpjs.orgfunctions/property_exists</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's property_exists</p>
 
 <!-- more -->
@@ -85,9 +85,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript method_exists function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/method_exists"/>
+    <link href="http://phpjs.orgfunctions/method_exists"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/method_exists</id>
+    <id>http://phpjs.orgfunctions/method_exists</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's method_exists</p>
 
 <!-- more -->
@@ -145,9 +145,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript get_object_vars function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/get_object_vars"/>
+    <link href="http://phpjs.orgfunctions/get_object_vars"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/get_object_vars</id>
+    <id>http://phpjs.orgfunctions/get_object_vars</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_object_vars</p>
 
 <!-- more -->
@@ -221,9 +221,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript get_declared_classes function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/get_declared_classes"/>
+    <link href="http://phpjs.orgfunctions/get_declared_classes"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/get_declared_classes</id>
+    <id>http://phpjs.orgfunctions/get_declared_classes</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_declared_classes</p>
 
 <!-- more -->
@@ -325,9 +325,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript get_class_vars function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/get_class_vars"/>
+    <link href="http://phpjs.orgfunctions/get_class_vars"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/get_class_vars</id>
+    <id>http://phpjs.orgfunctions/get_class_vars</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_class_vars</p>
 
 <!-- more -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: runkit | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/runkit/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: runkit | ]]></title>
+  <link href="http://phpjs.org/categories/runkit/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript runkit_superglobals function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/runkit_superglobals"/>
+    <link href="http://phpjs.orgfunctions/runkit_superglobals"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/runkit_superglobals</id>
+    <id>http://phpjs.orgfunctions/runkit_superglobals</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_superglobals</p>
 
 <!-- more -->
@@ -79,9 +79,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript runkit_method_rename function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/runkit_method_rename"/>
+    <link href="http://phpjs.orgfunctions/runkit_method_rename"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/runkit_method_rename</id>
+    <id>http://phpjs.orgfunctions/runkit_method_rename</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_rename</p>
 
 <!-- more -->
@@ -173,9 +173,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript runkit_method_remove function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/runkit_method_remove"/>
+    <link href="http://phpjs.orgfunctions/runkit_method_remove"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/runkit_method_remove</id>
+    <id>http://phpjs.orgfunctions/runkit_method_remove</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_remove</p>
 
 <!-- more -->
@@ -231,9 +231,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript runkit_method_redefine function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/runkit_method_redefine"/>
+    <link href="http://phpjs.orgfunctions/runkit_method_redefine"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/runkit_method_redefine</id>
+    <id>http://phpjs.orgfunctions/runkit_method_redefine</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_redefine</p>
 
 <!-- more -->
@@ -343,9 +343,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript runkit_method_copy function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/runkit_method_copy"/>
+    <link href="http://phpjs.orgfunctions/runkit_method_copy"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/runkit_method_copy</id>
+    <id>http://phpjs.orgfunctions/runkit_method_copy</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's runkit_method_copy</p>
 
 <!-- more -->

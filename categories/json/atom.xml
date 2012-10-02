@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: json | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/json/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: json | ]]></title>
+  <link href="http://phpjs.org/categories/json/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript json_last_error function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/json_last_error"/>
+    <link href="http://phpjs.orgfunctions/json_last_error"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/json_last_error</id>
+    <id>http://phpjs.orgfunctions/json_last_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's json_last_error</p>
 
 <!-- more -->
@@ -77,9 +77,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript json_encode function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/json_encode"/>
+    <link href="http://phpjs.orgfunctions/json_encode"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/json_encode</id>
+    <id>http://phpjs.orgfunctions/json_encode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's json_encode</p>
 
 <!-- more -->
@@ -413,9 +413,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript json_decode function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/json_decode"/>
+    <link href="http://phpjs.orgfunctions/json_decode"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/json_decode</id>
+    <id>http://phpjs.orgfunctions/json_decode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's json_decode</p>
 
 <!-- more -->
@@ -591,9 +591,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript json_last_error function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/json_last_error"/>
+    <link href="http://phpjs.org/functions/json_last_error"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/json_last_error</id>
+    <id>http://phpjs.org/functions/json_last_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's json_last_error</p>
 
 <!-- more -->
@@ -653,9 +653,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript json_encode function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/json_encode"/>
+    <link href="http://phpjs.org/functions/json_encode"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/json_encode</id>
+    <id>http://phpjs.org/functions/json_encode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's json_encode</p>
 
 <!-- more -->

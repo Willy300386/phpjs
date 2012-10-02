@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ctype | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/ctype/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: ctype | ]]></title>
+  <link href="http://phpjs.org/categories/ctype/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ctype_xdigit function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ctype_xdigit"/>
+    <link href="http://phpjs.orgfunctions/ctype_xdigit"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ctype_xdigit</id>
+    <id>http://phpjs.orgfunctions/ctype_xdigit</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_xdigit</p>
 
 <!-- more -->
@@ -69,9 +69,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ctype_upper function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ctype_upper"/>
+    <link href="http://phpjs.orgfunctions/ctype_upper"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ctype_upper</id>
+    <id>http://phpjs.orgfunctions/ctype_upper</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_upper</p>
 
 <!-- more -->
@@ -123,9 +123,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ctype_space function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ctype_space"/>
+    <link href="http://phpjs.orgfunctions/ctype_space"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ctype_space</id>
+    <id>http://phpjs.orgfunctions/ctype_space</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_space</p>
 
 <!-- more -->
@@ -177,9 +177,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ctype_punct function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ctype_punct"/>
+    <link href="http://phpjs.orgfunctions/ctype_punct"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ctype_punct</id>
+    <id>http://phpjs.orgfunctions/ctype_punct</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_punct</p>
 
 <!-- more -->
@@ -231,9 +231,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ctype_print function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ctype_print"/>
+    <link href="http://phpjs.orgfunctions/ctype_print"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ctype_print</id>
+    <id>http://phpjs.orgfunctions/ctype_print</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ctype_print</p>
 
 <!-- more -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: errorfunc | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/errorfunc/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: errorfunc | ]]></title>
+  <link href="http://phpjs.org/categories/errorfunc/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript user_error function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/user_error"/>
+    <link href="http://phpjs.orgfunctions/user_error"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/user_error</id>
+    <id>http://phpjs.orgfunctions/user_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's user_error</p>
 
 <!-- more -->
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript trigger_error function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/trigger_error"/>
+    <link href="http://phpjs.orgfunctions/trigger_error"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/trigger_error</id>
+    <id>http://phpjs.orgfunctions/trigger_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's trigger_error</p>
 
 <!-- more -->
@@ -319,9 +319,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript error_reporting function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/error_reporting"/>
+    <link href="http://phpjs.orgfunctions/error_reporting"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/error_reporting</id>
+    <id>http://phpjs.orgfunctions/error_reporting</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's error_reporting</p>
 
 <!-- more -->
@@ -369,9 +369,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript error_get_last function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/error_get_last"/>
+    <link href="http://phpjs.orgfunctions/error_get_last"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/error_get_last</id>
+    <id>http://phpjs.orgfunctions/error_get_last</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's error_get_last</p>
 
 <!-- more -->
@@ -415,9 +415,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript user_error function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/user_error"/>
+    <link href="http://phpjs.org/functions/user_error"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/user_error</id>
+    <id>http://phpjs.org/functions/user_error</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's user_error</p>
 
 <!-- more -->

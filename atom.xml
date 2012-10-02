@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[]]></title>
+  <link href="http://phpjs.org/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New site]]></title>
-    <link href="http://kvz.github.com/phpjs/blog/2012/09/26/new-site/"/>
+    <link href="http://phpjs.org/blog/2012/09/26/new-site/"/>
     <updated>2012-09-26T17:39:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/blog/2012/09/26/new-site</id>
+    <id>http://phpjs.org/blog/2012/09/26/new-site</id>
     <content type="html"><![CDATA[<p>Hi everybody,</p>
 
 <p>Welcome to our new site.
@@ -66,9 +66,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript var_export function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/var_export"/>
+    <link href="http://phpjs.org/functions/var_export"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/var_export</id>
+    <id>http://phpjs.org/functions/var_export</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s var_export</p>
 
 <!-- more -->
@@ -319,9 +319,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript utf8_encode function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/utf8_encode"/>
+    <link href="http://phpjs.org/functions/utf8_encode"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/utf8_encode</id>
+    <id>http://phpjs.org/functions/utf8_encode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s utf8_encode</p>
 
 <!-- more -->
@@ -446,9 +446,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript unserialize function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/unserialize"/>
+    <link href="http://phpjs.org/functions/unserialize"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/unserialize</id>
+    <id>http://phpjs.org/functions/unserialize</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s unserialize</p>
 
 <!-- more -->
@@ -785,9 +785,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript timezone_abbreviations_list function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/timezone_abbreviations_list"/>
+    <link href="http://phpjs.org/functions/timezone_abbreviations_list"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/timezone_abbreviations_list</id>
+    <id>http://phpjs.org/functions/timezone_abbreviations_list</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s timezone_abbreviations_list</p>
 
 <!-- more -->
@@ -5722,9 +5722,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript substr_count function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/substr_count"/>
+    <link href="http://phpjs.org/functions/substr_count"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/substr_count</id>
+    <id>http://phpjs.org/functions/substr_count</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s substr_count</p>
 
 <!-- more -->
@@ -5815,9 +5815,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript strtotime function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/strtotime"/>
+    <link href="http://phpjs.org/functions/strtotime"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/strtotime</id>
+    <id>http://phpjs.org/functions/strtotime</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s strtotime</p>
 
 <!-- more -->
@@ -6202,9 +6202,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript str_repeat function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/str_repeat"/>
+    <link href="http://phpjs.org/functions/str_repeat"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/str_repeat</id>
+    <id>http://phpjs.org/functions/str_repeat</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s str_repeat</p>
 
 <!-- more -->
@@ -6273,9 +6273,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript sprintf function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/sprintf"/>
+    <link href="http://phpjs.org/functions/sprintf"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/sprintf</id>
+    <id>http://phpjs.org/functions/sprintf</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s sprintf</p>
 
 <!-- more -->
@@ -6662,9 +6662,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript serialize function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/serialize"/>
+    <link href="http://phpjs.org/functions/serialize"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/serialize</id>
+    <id>http://phpjs.org/functions/serialize</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s serialize</p>
 
 <!-- more -->
@@ -6929,9 +6929,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript pathinfo function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/pathinfo"/>
+    <link href="http://phpjs.org/functions/pathinfo"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/pathinfo</id>
+    <id>http://phpjs.org/functions/pathinfo</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s pathinfo</p>
 
 <!-- more -->
@@ -7222,9 +7222,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript parse_str function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/parse_str"/>
+    <link href="http://phpjs.org/functions/parse_str"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/parse_str</id>
+    <id>http://phpjs.org/functions/parse_str</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s parse_str</p>
 
 <!-- more -->
@@ -7471,9 +7471,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript pack function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/pack"/>
+    <link href="http://phpjs.org/functions/pack"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/pack</id>
+    <id>http://phpjs.org/functions/pack</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s pack</p>
 
 <!-- more -->
@@ -8188,9 +8188,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript nl2br function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/nl2br"/>
+    <link href="http://phpjs.org/functions/nl2br"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/nl2br</id>
+    <id>http://phpjs.org/functions/nl2br</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s nl2br</p>
 
 <!-- more -->
@@ -8255,9 +8255,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript mt_rand function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/mt_rand"/>
+    <link href="http://phpjs.org/functions/mt_rand"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/mt_rand</id>
+    <id>http://phpjs.org/functions/mt_rand</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s mt_rand</p>
 
 <!-- more -->
@@ -8322,9 +8322,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript mail function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/mail"/>
+    <link href="http://phpjs.org/functions/mail"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/mail</id>
+    <id>http://phpjs.org/functions/mail</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s mail</p>
 
 <!-- more -->
@@ -8493,9 +8493,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript long2ip function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/long2ip"/>
+    <link href="http://phpjs.org/functions/long2ip"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/long2ip</id>
+    <id>http://phpjs.org/functions/long2ip</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s long2ip</p>
 
 <!-- more -->
@@ -8538,9 +8538,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript is_callable function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/is_callable"/>
+    <link href="http://phpjs.org/functions/is_callable"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/is_callable</id>
+    <id>http://phpjs.org/functions/is_callable</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s is_callable</p>
 
 <!-- more -->
@@ -8673,9 +8673,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript is_bool function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/is_bool"/>
+    <link href="http://phpjs.org/functions/is_bool"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/is_bool</id>
+    <id>http://phpjs.org/functions/is_bool</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s is_bool</p>
 
 <!-- more -->
@@ -8718,9 +8718,9 @@ make the project ready for the future.</p>
   
   <entry>
     <title type="html"><![CDATA[JavaScript http_build_query function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/http_build_query"/>
+    <link href="http://phpjs.org/functions/http_build_query"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/http_build_query</id>
+    <id>http://phpjs.org/functions/http_build_query</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP&#8217;s http_build_query</p>
 
 <!-- more -->

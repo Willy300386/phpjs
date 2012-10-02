@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: misc | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/misc/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: misc | ]]></title>
+  <link href="http://phpjs.org/categories/misc/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript pack function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/pack"/>
+    <link href="http://phpjs.org/functions/pack"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/pack</id>
+    <id>http://phpjs.org/functions/pack</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's pack</p>
 
 <!-- more -->
@@ -733,9 +733,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript uniqid function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/uniqid"/>
+    <link href="http://phpjs.orgfunctions/uniqid"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/uniqid</id>
+    <id>http://phpjs.orgfunctions/uniqid</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's uniqid</p>
 
 <!-- more -->
@@ -851,9 +851,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript time_sleep_until function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/time_sleep_until"/>
+    <link href="http://phpjs.orgfunctions/time_sleep_until"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/time_sleep_until</id>
+    <id>http://phpjs.orgfunctions/time_sleep_until</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's time_sleep_until</p>
 
 <!-- more -->
@@ -899,9 +899,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript php_strip_whitespace function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/php_strip_whitespace"/>
+    <link href="http://phpjs.orgfunctions/php_strip_whitespace"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/php_strip_whitespace</id>
+    <id>http://phpjs.orgfunctions/php_strip_whitespace</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's php_strip_whitespace</p>
 
 <!-- more -->
@@ -963,9 +963,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript defined function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/defined"/>
+    <link href="http://phpjs.orgfunctions/defined"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/defined</id>
+    <id>http://phpjs.orgfunctions/defined</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's defined</p>
 
 <!-- more -->

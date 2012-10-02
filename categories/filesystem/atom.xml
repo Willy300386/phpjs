@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: filesystem | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/filesystem/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: filesystem | ]]></title>
+  <link href="http://phpjs.org/categories/filesystem/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript pathinfo function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/pathinfo"/>
+    <link href="http://phpjs.org/functions/pathinfo"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/pathinfo</id>
+    <id>http://phpjs.org/functions/pathinfo</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's pathinfo</p>
 
 <!-- more -->
@@ -309,9 +309,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript rewind function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/rewind"/>
+    <link href="http://phpjs.orgfunctions/rewind"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/rewind</id>
+    <id>http://phpjs.orgfunctions/rewind</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's rewind</p>
 
 <!-- more -->
@@ -377,9 +377,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript realpath function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/realpath"/>
+    <link href="http://phpjs.orgfunctions/realpath"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/realpath</id>
+    <id>http://phpjs.orgfunctions/realpath</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's realpath</p>
 
 <!-- more -->
@@ -497,9 +497,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript readfile function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/readfile"/>
+    <link href="http://phpjs.orgfunctions/readfile"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/readfile</id>
+    <id>http://phpjs.orgfunctions/readfile</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's readfile</p>
 
 <!-- more -->
@@ -545,9 +545,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript popen function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/popen"/>
+    <link href="http://phpjs.orgfunctions/popen"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/popen</id>
+    <id>http://phpjs.orgfunctions/popen</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's popen</p>
 
 <!-- more -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: language | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/language/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: language | ]]></title>
+  <link href="http://phpjs.org/categories/language/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript require_once function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/require_once"/>
+    <link href="http://phpjs.orgfunctions/require_once"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/require_once</id>
+    <id>http://phpjs.orgfunctions/require_once</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's require_once</p>
 
 <!-- more -->
@@ -111,9 +111,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript require function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/require"/>
+    <link href="http://phpjs.orgfunctions/require"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/require</id>
+    <id>http://phpjs.orgfunctions/require</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's require</p>
 
 <!-- more -->
@@ -235,9 +235,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript include_once function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/include_once"/>
+    <link href="http://phpjs.orgfunctions/include_once"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/include_once</id>
+    <id>http://phpjs.orgfunctions/include_once</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's include_once</p>
 
 <!-- more -->
@@ -333,9 +333,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript include function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/include"/>
+    <link href="http://phpjs.orgfunctions/include"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/include</id>
+    <id>http://phpjs.orgfunctions/include</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's include</p>
 
 <!-- more -->
@@ -439,9 +439,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript require_once function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/require_once"/>
+    <link href="http://phpjs.org/functions/require_once"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/require_once</id>
+    <id>http://phpjs.org/functions/require_once</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's require_once</p>
 
 <!-- more -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: outcontrol | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/outcontrol/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: outcontrol | ]]></title>
+  <link href="http://phpjs.org/categories/outcontrol/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ob_start function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ob_start"/>
+    <link href="http://phpjs.orgfunctions/ob_start"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ob_start</id>
+    <id>http://phpjs.orgfunctions/ob_start</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_start</p>
 
 <!-- more -->
@@ -159,9 +159,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ob_list_handlers function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ob_list_handlers"/>
+    <link href="http://phpjs.orgfunctions/ob_list_handlers"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ob_list_handlers</id>
+    <id>http://phpjs.orgfunctions/ob_list_handlers</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_list_handlers</p>
 
 <!-- more -->
@@ -255,9 +255,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ob_get_status function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ob_get_status"/>
+    <link href="http://phpjs.orgfunctions/ob_get_status"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ob_get_status</id>
+    <id>http://phpjs.orgfunctions/ob_get_status</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_status</p>
 
 <!-- more -->
@@ -427,9 +427,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ob_get_level function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ob_get_level"/>
+    <link href="http://phpjs.orgfunctions/ob_get_level"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ob_get_level</id>
+    <id>http://phpjs.orgfunctions/ob_get_level</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_level</p>
 
 <!-- more -->
@@ -485,9 +485,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript ob_get_length function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/ob_get_length"/>
+    <link href="http://phpjs.orgfunctions/ob_get_length"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/ob_get_length</id>
+    <id>http://phpjs.orgfunctions/ob_get_length</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's ob_get_length</p>
 
 <!-- more -->

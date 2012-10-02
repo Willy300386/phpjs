@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: exec | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/exec/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: exec | ]]></title>
+  <link href="http://phpjs.org/categories/exec/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript escapeshellarg function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/escapeshellarg"/>
+    <link href="http://phpjs.orgfunctions/escapeshellarg"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/escapeshellarg</id>
+    <id>http://phpjs.orgfunctions/escapeshellarg</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's escapeshellarg</p>
 
 <!-- more -->
@@ -69,9 +69,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript escapeshellarg function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/escapeshellarg"/>
+    <link href="http://phpjs.org/functions/escapeshellarg"/>
     <updated>2011-02-06T13:00:00+01:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/escapeshellarg</id>
+    <id>http://phpjs.org/functions/escapeshellarg</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's escapeshellarg</p>
 
 <!-- more -->

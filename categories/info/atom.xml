@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: info | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/info/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: info | ]]></title>
+  <link href="http://phpjs.org/categories/info/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript version_compare function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/version_compare"/>
+    <link href="http://phpjs.orgfunctions/version_compare"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/version_compare</id>
+    <id>http://phpjs.orgfunctions/version_compare</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's version_compare</p>
 
 <!-- more -->
@@ -269,9 +269,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript set_time_limit function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/set_time_limit"/>
+    <link href="http://phpjs.orgfunctions/set_time_limit"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/set_time_limit</id>
+    <id>http://phpjs.orgfunctions/set_time_limit</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's set_time_limit</p>
 
 <!-- more -->
@@ -329,9 +329,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript set_include_path function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/set_include_path"/>
+    <link href="http://phpjs.orgfunctions/set_include_path"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/set_include_path</id>
+    <id>http://phpjs.orgfunctions/set_include_path</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's set_include_path</p>
 
 <!-- more -->
@@ -405,9 +405,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript restore_include_path function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/restore_include_path"/>
+    <link href="http://phpjs.orgfunctions/restore_include_path"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/restore_include_path</id>
+    <id>http://phpjs.orgfunctions/restore_include_path</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's restore_include_path</p>
 
 <!-- more -->
@@ -451,9 +451,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript putenv function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/putenv"/>
+    <link href="http://phpjs.orgfunctions/putenv"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/putenv</id>
+    <id>http://phpjs.orgfunctions/putenv</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's putenv</p>
 
 <!-- more -->

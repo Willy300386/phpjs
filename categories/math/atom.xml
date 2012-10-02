@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: math | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/math/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: math | ]]></title>
+  <link href="http://phpjs.org/categories/math/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript mt_rand function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/mt_rand"/>
+    <link href="http://phpjs.org/functions/mt_rand"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/mt_rand</id>
+    <id>http://phpjs.org/functions/mt_rand</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's mt_rand</p>
 
 <!-- more -->
@@ -83,9 +83,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript deg2rad function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/deg2rad"/>
+    <link href="http://phpjs.org/functions/deg2rad"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/deg2rad</id>
+    <id>http://phpjs.org/functions/deg2rad</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's deg2rad</p>
 
 <!-- more -->
@@ -125,9 +125,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript tanh function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/tanh"/>
+    <link href="http://phpjs.orgfunctions/tanh"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/tanh</id>
+    <id>http://phpjs.orgfunctions/tanh</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's tanh</p>
 
 <!-- more -->
@@ -165,9 +165,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript tan function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/tan"/>
+    <link href="http://phpjs.orgfunctions/tan"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/tan</id>
+    <id>http://phpjs.orgfunctions/tan</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's tan</p>
 
 <!-- more -->
@@ -205,9 +205,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript sqrt function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/sqrt"/>
+    <link href="http://phpjs.orgfunctions/sqrt"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/sqrt</id>
+    <id>http://phpjs.orgfunctions/sqrt</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sqrt</p>
 
 <!-- more -->

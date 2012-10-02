@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: url | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/url/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: url | ]]></title>
+  <link href="http://phpjs.org/categories/url/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript http_build_query function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/http_build_query"/>
+    <link href="http://phpjs.org/functions/http_build_query"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/http_build_query</id>
+    <id>http://phpjs.org/functions/http_build_query</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's http_build_query</p>
 
 <!-- more -->
@@ -163,9 +163,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript get_headers function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/get_headers"/>
+    <link href="http://phpjs.org/functions/get_headers"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/get_headers</id>
+    <id>http://phpjs.org/functions/get_headers</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_headers</p>
 
 <!-- more -->
@@ -265,9 +265,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript base64_encode function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/base64_encode"/>
+    <link href="http://phpjs.org/functions/base64_encode"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/base64_encode</id>
+    <id>http://phpjs.org/functions/base64_encode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's base64_encode</p>
 
 <!-- more -->
@@ -387,9 +387,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript base64_decode function]]></title>
-    <link href="http://kvz.github.com/phpjs/phpjs/functions/base64_decode"/>
+    <link href="http://phpjs.org/functions/base64_decode"/>
     <updated>2012-09-26T14:00:00+02:00</updated>
-    <id>http://kvz.github.com/phpjs/phpjs/functions/base64_decode</id>
+    <id>http://phpjs.org/functions/base64_decode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's base64_decode</p>
 
 <!-- more -->
@@ -523,9 +523,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript urlencode function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/urlencode"/>
+    <link href="http://phpjs.orgfunctions/urlencode"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/urlencode</id>
+    <id>http://phpjs.orgfunctions/urlencode</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's urlencode</p>
 
 <!-- more -->

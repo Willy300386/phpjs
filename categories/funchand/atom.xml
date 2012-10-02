@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: funchand | php.js]]></title>
-  <link href="http://kvz.github.com/phpjs/categories/funchand/atom.xml" rel="self"/>
-  <link href="http://kvz.github.com/phpjs/"/>
-  <updated>2012-10-02T01:52:44+02:00</updated>
-  <id>http://kvz.github.com/phpjs/</id>
+  <title><![CDATA[Category: funchand | ]]></title>
+  <link href="http://phpjs.org/categories/funchand/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T02:08:12+02:00</updated>
+  <id>http://phpjs.org/</id>
   <author>
     <name><![CDATA[Kevin van Zonneveld]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript register_shutdown_function function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/register_shutdown_function"/>
+    <link href="http://phpjs.orgfunctions/register_shutdown_function"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/register_shutdown_function</id>
+    <id>http://phpjs.orgfunctions/register_shutdown_function</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's register_shutdown_function</p>
 
 <!-- more -->
@@ -83,9 +83,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript get_defined_functions function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/get_defined_functions"/>
+    <link href="http://phpjs.orgfunctions/get_defined_functions"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/get_defined_functions</id>
+    <id>http://phpjs.orgfunctions/get_defined_functions</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's get_defined_functions</p>
 
 <!-- more -->
@@ -179,9 +179,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript function_exists function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/function_exists"/>
+    <link href="http://phpjs.orgfunctions/function_exists"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/function_exists</id>
+    <id>http://phpjs.orgfunctions/function_exists</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's function_exists</p>
 
 <!-- more -->
@@ -233,9 +233,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript func_num_args function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/func_num_args"/>
+    <link href="http://phpjs.orgfunctions/func_num_args"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/func_num_args</id>
+    <id>http://phpjs.orgfunctions/func_num_args</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's func_num_args</p>
 
 <!-- more -->
@@ -295,9 +295,9 @@
   
   <entry>
     <title type="html"><![CDATA[JavaScript func_get_args function]]></title>
-    <link href="http://kvz.github.com/phpjsfunctions/func_get_args"/>
+    <link href="http://phpjs.orgfunctions/func_get_args"/>
     <updated>2012-05-17T18:49:00+02:00</updated>
-    <id>http://kvz.github.com/phpjsfunctions/func_get_args</id>
+    <id>http://phpjs.orgfunctions/func_get_args</id>
     <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's func_get_args</p>
 
 <!-- more -->
