@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: math | ]]></title>
+  <link href="http://phpjs.org/categories/math/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:03:19+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript tanh function]]></title>
+    <link href="http://phpjs.org/functions/tanh"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-tanh</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's tanh</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>math/tanh.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/math/tanh.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">tanh</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// *     example 1: tanh(5.4251848798444815);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 0.9999612058841574</span>
+</span><span class='line'><span class="k">return</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="o">-</span><span class="nx">arg</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="o">-</span><span class="nx">arg</span><span class="p">));</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/math/tanh.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/math/tanh.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript tan function]]></title>
+    <link href="http://phpjs.org/functions/tan"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-tan</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's tan</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>math/tan.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/math/tan.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">tan</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// *     example 1: tan(8723321.4);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 5.4251848798444815</span>
+</span><span class='line'><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">tan</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/math/tan.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/math/tan.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript sqrt function]]></title>
+    <link href="http://phpjs.org/functions/sqrt"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-sqrt</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sqrt</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>math/sqrt.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/math/sqrt.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">sqrt</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// *     example 1: sqrt(8723321.4);</span>
+</span><span class='line'><span class="c1">// *     returns 1: 2953.5269424875746</span>
+</span><span class='line'><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/math/sqrt.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/math/sqrt.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript sinh function]]></title>
+    <link href="http://phpjs.org/functions/sinh"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-sinh</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sinh</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>math/sinh.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/math/sinh.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">sinh</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// *     example 1: sinh(-0.9834330348825909);</span>
+</span><span class='line'><span class="c1">// *     returns 1: -1.1497971402636502</span>
+</span><span class='line'><span class="k">return</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">exp</span><span class="p">(</span><span class="o">-</span><span class="nx">arg</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/math/sinh.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/math/sinh.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript sin function]]></title>
+    <link href="http://phpjs.org/functions/sin"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-sin</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's sin</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>math/sin.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/math/sin.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">sin</span> <span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Onno Marsman</span>
+</span><span class='line'><span class="c1">// *     example 1: sin(8723321.4);</span>
+</span><span class='line'><span class="c1">// *     returns 1: -0.9834330348825909</span>
+</span><span class='line'><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/math/sin.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/math/sin.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

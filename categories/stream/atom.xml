@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: stream | ]]></title>
+  <link href="http://phpjs.org/categories/stream/atom.xml" rel="self"/>
+  <link href="http://phpjs.org/"/>
+  <updated>2012-10-02T03:03:19+02:00</updated>
+  <id>http://phpjs.org/</id>
+  <author>
+    <name><![CDATA[Kevin van Zonneveld]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript stream_is_local function]]></title>
+    <link href="http://phpjs.org/functions/stream_is_local"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-stream_is_local</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_is_local</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stream/stream_is_local.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/stream/stream_is_local.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stream_is_local</span> <span class="p">(</span><span class="nx">stream_or_url</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: stream_is_local(&#39;/etc&#39;);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">stream_or_url</span> <span class="o">===</span> <span class="s1">&#39;string&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">((</span><span class="sr">/^(https?|ftps?|ssl|tls):/</span><span class="p">).</span><span class="nx">test</span><span class="p">(</span><span class="nx">stream_or_url</span><span class="p">))</span> <span class="o">?</span> <span class="kc">false</span> <span class="o">:</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// Need a better check than this</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="nx">stream_or_url</span><span class="p">.</span><span class="nx">is_local</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/stream/stream_is_local.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/stream/stream_is_local.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript stream_get_line function]]></title>
+    <link href="http://phpjs.org/functions/stream_get_line"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-stream_get_line</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_get_line</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stream/stream_get_line.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/stream/stream_get_line.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stream_get_line</span> <span class="p">(</span><span class="nx">handle</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">ending</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: fopen(&#39;http://kevin.vanzonneveld.net/pj_test_supportfile_1.htm&#39;, &#39;r&#39;);</span>
+</span><span class='line'><span class="c1">// *     example 1: stream_get_line(handle, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;&amp;lt;&#39;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">fullline</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span> <span class="o">||</span> <span class="nx">length</span> <span class="o">!==</span> <span class="kc">undefined</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="o">!</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">start</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">start</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">][</span><span class="nx">start</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// Resource was already closed or already reached the end of the file</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Fix: Should we also test for /\r\n?|\n/?</span>
+</span><span class='line'><span class="nx">fullline</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">ending</span><span class="p">,</span> <span class="nx">start</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">fullline</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">fullline</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="nx">start</span><span class="p">);</span> <span class="c1">// Get to rest of the file</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">length</span> <span class="o">=</span> <span class="p">(</span><span class="nx">length</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="nx">fullline</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span> <span class="nx">length</span><span class="p">)</span> <span class="o">?</span> <span class="nx">fullline</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">||</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// two bytes per character (or surrogate), but ensure at least one</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">length</span><span class="p">;</span>
+</span><span class='line'><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">substr</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span> <span class="nx">length</span> <span class="o">-</span> <span class="p">(</span><span class="nx">fullline</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ending</span> <span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">amp</span><span class="p">;</span> <span class="nx">ending</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="nx">ending</span><span class="p">.</span><span class="nx">length</span> <span class="o">:</span> <span class="mi">0</span><span class="p">));</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/stream/stream_get_line.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/stream/stream_get_line.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript stream_get_contents function]]></title>
+    <link href="http://phpjs.org/functions/stream_get_contents"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-stream_get_contents</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_get_contents</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stream/stream_get_contents.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/stream/stream_get_contents.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stream_get_contents</span> <span class="p">(</span><span class="nx">handle</span><span class="p">,</span> <span class="nx">maxLength</span><span class="p">,</span> <span class="nx">offset</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: var stream = fopen(&#39;http://kevin.vanzonneveld.net/pj_test_supportfile_1.htm&#39;, &#39;r&#39;);</span>
+</span><span class='line'><span class="c1">// *     example 1: stream_get_contents(stream, 7, 2);</span>
+</span><span class='line'><span class="c1">// *     returns 1: &#39;DOCTYPE&#39;</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span> <span class="o">||</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span> <span class="o">||</span> <span class="o">!</span><span class="nx">handle</span> <span class="o">||</span> <span class="o">!</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nx">offset</span> <span class="o">=</span> <span class="nx">offset</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">offset</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">chrs</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceData</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">].</span><span class="nx">slice</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">]);</span>
+</span><span class='line'><span class="nx">chrs</span> <span class="o">=</span> <span class="nx">maxLength</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">0</span> <span class="o">?</span> <span class="nx">chrs</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">maxLength</span><span class="p">)</span> <span class="o">:</span> <span class="nx">chrs</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">echo</span><span class="p">(</span><span class="nx">chrs</span><span class="p">);</span>
+</span><span class='line'><span class="k">this</span><span class="p">.</span><span class="nx">php_js</span><span class="p">.</span><span class="nx">resourceDataPointer</span><span class="p">[</span><span class="nx">handle</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">chrs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="nx">chrs</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/stream/stream_get_contents.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/stream/stream_get_contents.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript stream_context_set_params function]]></title>
+    <link href="http://phpjs.org/functions/stream_context_set_params"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-stream_context_set_params</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_context_set_params</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stream/stream_context_set_params.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/stream/stream_context_set_params.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stream_context_set_params</span> <span class="p">(</span><span class="nx">stream_or_context</span><span class="p">,</span> <span class="nx">params</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: var context = stream_context_create();</span>
+</span><span class='line'><span class="c1">// *     example 1: stream_context_set_params({notification:function (notification_code, severity, message, message_code, bytes_transferred, bytes_max) {}});</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">param</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Docs also allow for &quot;options&quot; as a parameter here (i.e., setting options instead of parameters) and source seems to allow encoding, input_encoding, output_encoding, and default_mode</span>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="nx">param</span> <span class="k">in</span> <span class="nx">params</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Overwrites all, or just supplied? Seems like just supplied</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">param</span> <span class="o">===</span> <span class="s1">&#39;options&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_options</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span class="nx">param</span><span class="p">];</span> <span class="c1">// Overwrite all?</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_params</span><span class="p">[</span><span class="nx">param</span><span class="p">]</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span class="nx">param</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/stream/stream_context_set_params.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/stream/stream_context_set_params.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript stream_context_set_option function]]></title>
+    <link href="http://phpjs.org/functions/stream_context_set_option"/>
+    <updated>2010-10-10T12:10:10+02:00</updated>
+    <id>http://phpjs.org/functions/function-stream_context_set_option</id>
+    <content type="html"><![CDATA[<p>A JavaScript equivalent of PHP's stream_context_set_option</p>
+
+<!-- more -->
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>stream/stream_context_set_option.js </span><a href='https://raw.github.com/kvz/phpjs/master/functions/stream/stream_context_set_option.js'>raw on github </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">function</span> <span class="nx">stream_context_set_option</span> <span class="p">(</span><span class="nx">stream_or_context</span><span class="p">,</span> <span class="nx">optionsOrWrapper</span><span class="p">,</span> <span class="nx">option</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="c1">// http://kevin.vanzonneveld.net</span>
+</span><span class='line'><span class="c1">// +   original by: Brett Zamir (http://brett-zamir.me)</span>
+</span><span class='line'><span class="c1">// *     example 1: var opts = {http:{ method:&#39;GET&#39;, header: &#39;Accept-language: en\r\nCookie: foo=bar\r\n&#39; } };</span>
+</span><span class='line'><span class="c1">// *     example 1: var context = stream_context_create(opts);</span>
+</span><span class='line'><span class="c1">// *     example 1: stream_context_set_option(context, opts);</span>
+</span><span class='line'><span class="c1">// *     returns 1: true</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nx">option</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_options</span><span class="p">[</span><span class="nx">optionsOrWrapper</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// Don&#39;t overwrite all?</span>
+</span><span class='line'>        <span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_options</span><span class="p">[</span><span class="nx">optionsOrWrapper</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_options</span><span class="p">[</span><span class="nx">optionsOrWrapper</span><span class="p">][</span><span class="nx">option</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">stream_or_context</span><span class="p">.</span><span class="nx">stream_options</span> <span class="o">=</span> <span class="nx">optionsOrWrapper</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+ <li><a href="https://github.com/kvz/phpjs/blob/master/functions/stream/stream_context_set_option.js">view on github</a></li>
+ <li><a href="https://github.com/kvz/phpjs/edit/master/functions/stream/stream_context_set_option.js">edit on github</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
