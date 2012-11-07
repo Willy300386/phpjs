@@ -125,6 +125,14 @@ function unpack(format, data) {
                     if (instruction === 'h') {
                         word = word[1]+word[0];
                     }
+    				else
+					{
+						if(currentData.charCodeAt(i) < 16)
+						{
+							currentResult += '0';
+						}
+					}
+
                    currentResult += word;
                 }
                 result[label] = currentResult;
